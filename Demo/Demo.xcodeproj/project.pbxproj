@@ -7,161 +7,172 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C51ADC118D4BA1C00B3F53F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51ADC018D4BA1C00B3F53F /* Foundation.framework */; };
-		3C51ADC318D4BA1C00B3F53F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51ADC218D4BA1C00B3F53F /* CoreGraphics.framework */; };
-		3C51ADC518D4BA1C00B3F53F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51ADC418D4BA1C00B3F53F /* UIKit.framework */; };
-		3C51ADCB18D4BA1C00B3F53F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C51ADC918D4BA1C00B3F53F /* InfoPlist.strings */; };
-		3C51ADCD18D4BA1C00B3F53F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C51ADCC18D4BA1C00B3F53F /* main.m */; };
-		3C51ADD118D4BA1C00B3F53F /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C51ADD018D4BA1C00B3F53F /* ARAppDelegate.m */; };
-		3C51ADD418D4BA1C00B3F53F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C51ADD218D4BA1C00B3F53F /* Main.storyboard */; };
-		3C51ADD718D4BA1C00B3F53F /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C51ADD618D4BA1C00B3F53F /* ARViewController.m */; };
-		3C51ADD918D4BA1C00B3F53F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C51ADD818D4BA1C00B3F53F /* Images.xcassets */; };
-		3C51ADE018D4BA1C00B3F53F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51ADDF18D4BA1C00B3F53F /* XCTest.framework */; };
-		3C51ADE118D4BA1C00B3F53F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51ADC018D4BA1C00B3F53F /* Foundation.framework */; };
-		3C51ADE218D4BA1C00B3F53F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51ADC418D4BA1C00B3F53F /* UIKit.framework */; };
-		3C51ADEA18D4BA1C00B3F53F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C51ADE818D4BA1C00B3F53F /* InfoPlist.strings */; };
-		3C51ADF618D4C27300B3F53F /* ARTiledImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C51ADF518D4C27300B3F53F /* ARTiledImageTests.m */; };
-		6AC3FCD1C8FF4D899C2EED68 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1172BC69714C03915FDAF0 /* libPods.a */; };
-		7A757C4323204C72A62D10BA /* libPods-DemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3E67AF14E041F6AED6071A /* libPods-DemoTests.a */; };
+		07DDEB3EBEEC4C6FAF715BF1 /* libPods-DemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DB4ADA533041DD9D9E7647 /* libPods-DemoTests.a */; };
+		273E9EE865984F44A8AF2A9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2957D8BD1FB4630AD6F922F /* libPods.a */; };
+		3C7F86CD18CE609200F7091A /* ARTiledImageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F86CC18CE609200F7091A /* ARTiledImageDemoViewController.m */; };
+		3CB0E6D718C8B9E2009CE8DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0E6D618C8B9E2009CE8DB /* Foundation.framework */; };
+		3CB0E6D918C8B9E2009CE8DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0E6D818C8B9E2009CE8DB /* CoreGraphics.framework */; };
+		3CB0E6DB18C8B9E2009CE8DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0E6DA18C8B9E2009CE8DB /* UIKit.framework */; };
+		3CB0E6E118C8B9E2009CE8DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CB0E6DF18C8B9E2009CE8DB /* InfoPlist.strings */; };
+		3CB0E6E318C8B9E2009CE8DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0E6E218C8B9E2009CE8DB /* main.m */; };
+		3CB0E6EF18C8B9E2009CE8DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB0E6EE18C8B9E2009CE8DB /* Images.xcassets */; };
+		3CB0E6F618C8B9E2009CE8DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0E6F518C8B9E2009CE8DB /* XCTest.framework */; };
+		3CB0E6F718C8B9E2009CE8DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0E6D618C8B9E2009CE8DB /* Foundation.framework */; };
+		3CB0E6F818C8B9E3009CE8DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0E6DA18C8B9E2009CE8DB /* UIKit.framework */; };
+		3CB0E70018C8B9E3009CE8DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CB0E6FE18C8B9E3009CE8DB /* InfoPlist.strings */; };
+		3CB0E71C18C8BB08009CE8DB /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0E70E18C8BB08009CE8DB /* ARAppDelegate.m */; };
+		3CB0E72218C8BB08009CE8DB /* ARMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0E71818C8BB08009CE8DB /* ARMasterViewController.m */; };
+		3CB0E72A18C8BC62009CE8DB /* ARMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB0E72818C8BC62009CE8DB /* ARMasterViewController.xib */; };
+		3CB8E36618D4DEA40023AB71 /* ARMasterViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E36318D4DEA40023AB71 /* ARMasterViewControllerTests.m */; };
+		3CB8E36718D4DEA40023AB71 /* ARTiledImageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E36418D4DEA40023AB71 /* ARTiledImageViewControllerTests.m */; };
+		3CB8E36818D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3C51ADE318D4BA1C00B3F53F /* PBXContainerItemProxy */ = {
+		3CB0E6F918C8B9E3009CE8DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3C51ADB518D4BA1C00B3F53F /* Project object */;
+			containerPortal = 3CB0E6CB18C8B9E2009CE8DB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3C51ADBC18D4BA1C00B3F53F;
+			remoteGlobalIDString = 3CB0E6D218C8B9E2009CE8DB;
 			remoteInfo = Demo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C51ADBD18D4BA1C00B3F53F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C51ADC018D4BA1C00B3F53F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3C51ADC218D4BA1C00B3F53F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3C51ADC418D4BA1C00B3F53F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3C51ADC818D4BA1C00B3F53F /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
-		3C51ADCA18D4BA1C00B3F53F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3C51ADCC18D4BA1C00B3F53F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3C51ADCE18D4BA1C00B3F53F /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
-		3C51ADCF18D4BA1C00B3F53F /* ARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
-		3C51ADD018D4BA1C00B3F53F /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
-		3C51ADD318D4BA1C00B3F53F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3C51ADD518D4BA1C00B3F53F /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
-		3C51ADD618D4BA1C00B3F53F /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
-		3C51ADD818D4BA1C00B3F53F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3C51ADDE18D4BA1C00B3F53F /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C51ADDF18D4BA1C00B3F53F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3C51ADE718D4BA1C00B3F53F /* DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoTests-Info.plist"; sourceTree = "<group>"; };
-		3C51ADE918D4BA1C00B3F53F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3C51ADF518D4C27300B3F53F /* ARTiledImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageTests.m; sourceTree = "<group>"; };
-		3C51ADF718D4C2DA00B3F53F /* DemoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoTests-Prefix.pch"; sourceTree = "<group>"; };
-		4470A99B8BDB4EBDAFEC7565 /* Pods-DemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.xcconfig"; path = "Pods/Pods-DemoTests.xcconfig"; sourceTree = "<group>"; };
-		6D3E67AF14E041F6AED6071A /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4885E4BEA464DFEAD0283CB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		CD1172BC69714C03915FDAF0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C7F86CB18CE609200F7091A /* ARTiledImageDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTiledImageDemoViewController.h; sourceTree = "<group>"; };
+		3C7F86CC18CE609200F7091A /* ARTiledImageDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageDemoViewController.m; sourceTree = "<group>"; };
+		3CB0E6D318C8B9E2009CE8DB /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB0E6D618C8B9E2009CE8DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3CB0E6D818C8B9E2009CE8DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3CB0E6DA18C8B9E2009CE8DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3CB0E6DE18C8B9E2009CE8DB /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
+		3CB0E6E018C8B9E2009CE8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3CB0E6E218C8B9E2009CE8DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3CB0E6E418C8B9E2009CE8DB /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
+		3CB0E6EE18C8B9E2009CE8DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3CB0E6F418C8B9E2009CE8DB /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB0E6F518C8B9E2009CE8DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3CB0E6FD18C8B9E3009CE8DB /* DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoTests-Info.plist"; sourceTree = "<group>"; };
+		3CB0E6FF18C8B9E3009CE8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3CB0E70D18C8BB08009CE8DB /* ARAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
+		3CB0E70E18C8BB08009CE8DB /* ARAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
+		3CB0E71718C8BB08009CE8DB /* ARMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMasterViewController.h; sourceTree = "<group>"; };
+		3CB0E71818C8BB08009CE8DB /* ARMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMasterViewController.m; sourceTree = "<group>"; };
+		3CB0E72918C8BC62009CE8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ARMasterViewController.xib; sourceTree = "<group>"; };
+		3CB0E72B18C8BD61009CE8DB /* DemoTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DemoTests-Prefix.pch"; sourceTree = "<group>"; };
+		3CB8E36318D4DEA40023AB71 /* ARMasterViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMasterViewControllerTests.m; sourceTree = "<group>"; };
+		3CB8E36418D4DEA40023AB71 /* ARTiledImageViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageViewControllerTests.m; sourceTree = "<group>"; };
+		3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARWebTiledImageDataSourceTests.m; sourceTree = "<group>"; };
+		93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.xcconfig"; path = "Pods/Pods-DemoTests.xcconfig"; sourceTree = "<group>"; };
+		98DB4ADA533041DD9D9E7647 /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0E280B71AE47E499695C40 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D2957D8BD1FB4630AD6F922F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3C51ADBA18D4BA1C00B3F53F /* Frameworks */ = {
+		3CB0E6D018C8B9E2009CE8DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C51ADC318D4BA1C00B3F53F /* CoreGraphics.framework in Frameworks */,
-				3C51ADC518D4BA1C00B3F53F /* UIKit.framework in Frameworks */,
-				3C51ADC118D4BA1C00B3F53F /* Foundation.framework in Frameworks */,
-				6AC3FCD1C8FF4D899C2EED68 /* libPods.a in Frameworks */,
+				3CB0E6D918C8B9E2009CE8DB /* CoreGraphics.framework in Frameworks */,
+				3CB0E6DB18C8B9E2009CE8DB /* UIKit.framework in Frameworks */,
+				3CB0E6D718C8B9E2009CE8DB /* Foundation.framework in Frameworks */,
+				273E9EE865984F44A8AF2A9D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C51ADDB18D4BA1C00B3F53F /* Frameworks */ = {
+		3CB0E6F118C8B9E2009CE8DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C51ADE018D4BA1C00B3F53F /* XCTest.framework in Frameworks */,
-				3C51ADE218D4BA1C00B3F53F /* UIKit.framework in Frameworks */,
-				3C51ADE118D4BA1C00B3F53F /* Foundation.framework in Frameworks */,
-				7A757C4323204C72A62D10BA /* libPods-DemoTests.a in Frameworks */,
+				3CB0E6F618C8B9E2009CE8DB /* XCTest.framework in Frameworks */,
+				3CB0E6F818C8B9E3009CE8DB /* UIKit.framework in Frameworks */,
+				3CB0E6F718C8B9E2009CE8DB /* Foundation.framework in Frameworks */,
+				07DDEB3EBEEC4C6FAF715BF1 /* libPods-DemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C51ADB418D4BA1C00B3F53F = {
+		3CB0E6CA18C8B9E2009CE8DB = {
 			isa = PBXGroup;
 			children = (
-				3C51ADC618D4BA1C00B3F53F /* Demo */,
-				3C51ADE518D4BA1C00B3F53F /* DemoTests */,
-				3C51ADBF18D4BA1C00B3F53F /* Frameworks */,
-				3C51ADBE18D4BA1C00B3F53F /* Products */,
-				C4885E4BEA464DFEAD0283CB /* Pods.xcconfig */,
-				4470A99B8BDB4EBDAFEC7565 /* Pods-DemoTests.xcconfig */,
+				3CB0E6DC18C8B9E2009CE8DB /* Demo */,
+				3CB0E6FB18C8B9E3009CE8DB /* DemoTests */,
+				3CB0E6D518C8B9E2009CE8DB /* Frameworks */,
+				3CB0E6D418C8B9E2009CE8DB /* Products */,
+				BD0E280B71AE47E499695C40 /* Pods.xcconfig */,
+				93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
-		3C51ADBE18D4BA1C00B3F53F /* Products */ = {
+		3CB0E6D418C8B9E2009CE8DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C51ADBD18D4BA1C00B3F53F /* Demo.app */,
-				3C51ADDE18D4BA1C00B3F53F /* DemoTests.xctest */,
+				3CB0E6D318C8B9E2009CE8DB /* Demo.app */,
+				3CB0E6F418C8B9E2009CE8DB /* DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3C51ADBF18D4BA1C00B3F53F /* Frameworks */ = {
+		3CB0E6D518C8B9E2009CE8DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C51ADC018D4BA1C00B3F53F /* Foundation.framework */,
-				3C51ADC218D4BA1C00B3F53F /* CoreGraphics.framework */,
-				3C51ADC418D4BA1C00B3F53F /* UIKit.framework */,
-				3C51ADDF18D4BA1C00B3F53F /* XCTest.framework */,
-				CD1172BC69714C03915FDAF0 /* libPods.a */,
-				6D3E67AF14E041F6AED6071A /* libPods-DemoTests.a */,
+				3CB0E6D618C8B9E2009CE8DB /* Foundation.framework */,
+				3CB0E6D818C8B9E2009CE8DB /* CoreGraphics.framework */,
+				3CB0E6DA18C8B9E2009CE8DB /* UIKit.framework */,
+				3CB0E6F518C8B9E2009CE8DB /* XCTest.framework */,
+				D2957D8BD1FB4630AD6F922F /* libPods.a */,
+				98DB4ADA533041DD9D9E7647 /* libPods-DemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3C51ADC618D4BA1C00B3F53F /* Demo */ = {
+		3CB0E6DC18C8B9E2009CE8DB /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				3C51ADCF18D4BA1C00B3F53F /* ARAppDelegate.h */,
-				3C51ADD018D4BA1C00B3F53F /* ARAppDelegate.m */,
-				3C51ADD218D4BA1C00B3F53F /* Main.storyboard */,
-				3C51ADD518D4BA1C00B3F53F /* ARViewController.h */,
-				3C51ADD618D4BA1C00B3F53F /* ARViewController.m */,
-				3C51ADD818D4BA1C00B3F53F /* Images.xcassets */,
-				3C51ADC718D4BA1C00B3F53F /* Supporting Files */,
+				3CB0E72818C8BC62009CE8DB /* ARMasterViewController.xib */,
+				3CB0E70D18C8BB08009CE8DB /* ARAppDelegate.h */,
+				3CB0E70E18C8BB08009CE8DB /* ARAppDelegate.m */,
+				3CB0E71718C8BB08009CE8DB /* ARMasterViewController.h */,
+				3CB0E71818C8BB08009CE8DB /* ARMasterViewController.m */,
+				3CB0E6EE18C8B9E2009CE8DB /* Images.xcassets */,
+				3CB0E6DD18C8B9E2009CE8DB /* Supporting Files */,
+				3C7F86CB18CE609200F7091A /* ARTiledImageDemoViewController.h */,
+				3C7F86CC18CE609200F7091A /* ARTiledImageDemoViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		3C51ADC718D4BA1C00B3F53F /* Supporting Files */ = {
+		3CB0E6DD18C8B9E2009CE8DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C51ADC818D4BA1C00B3F53F /* Demo-Info.plist */,
-				3C51ADC918D4BA1C00B3F53F /* InfoPlist.strings */,
-				3C51ADCC18D4BA1C00B3F53F /* main.m */,
-				3C51ADCE18D4BA1C00B3F53F /* Demo-Prefix.pch */,
+				3CB0E6DE18C8B9E2009CE8DB /* Demo-Info.plist */,
+				3CB0E6DF18C8B9E2009CE8DB /* InfoPlist.strings */,
+				3CB0E6E218C8B9E2009CE8DB /* main.m */,
+				3CB0E6E418C8B9E2009CE8DB /* Demo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3C51ADE518D4BA1C00B3F53F /* DemoTests */ = {
+		3CB0E6FB18C8B9E3009CE8DB /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				3C51ADE618D4BA1C00B3F53F /* Supporting Files */,
-				3C51ADF518D4C27300B3F53F /* ARTiledImageTests.m */,
+				3CB8E36318D4DEA40023AB71 /* ARMasterViewControllerTests.m */,
+				3CB8E36418D4DEA40023AB71 /* ARTiledImageViewControllerTests.m */,
+				3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */,
+				3CB0E6FC18C8B9E3009CE8DB /* Supporting Files */,
 			);
 			path = DemoTests;
 			sourceTree = "<group>";
 		};
-		3C51ADE618D4BA1C00B3F53F /* Supporting Files */ = {
+		3CB0E6FC18C8B9E3009CE8DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C51ADE718D4BA1C00B3F53F /* DemoTests-Info.plist */,
-				3C51ADE818D4BA1C00B3F53F /* InfoPlist.strings */,
-				3C51ADF718D4C2DA00B3F53F /* DemoTests-Prefix.pch */,
+				3CB0E72B18C8BD61009CE8DB /* DemoTests-Prefix.pch */,
+				3CB0E6FD18C8B9E3009CE8DB /* DemoTests-Info.plist */,
+				3CB0E6FE18C8B9E3009CE8DB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,15 +180,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C51ADBC18D4BA1C00B3F53F /* Demo */ = {
+		3CB0E6D218C8B9E2009CE8DB /* Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C51ADEF18D4BA1C00B3F53F /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = 3CB0E70518C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
-				EB52B37955F241F6B35B1109 /* Check Pods Manifest.lock */,
-				3C51ADB918D4BA1C00B3F53F /* Sources */,
-				3C51ADBA18D4BA1C00B3F53F /* Frameworks */,
-				3C51ADBB18D4BA1C00B3F53F /* Resources */,
-				6DB0BFACB136443FB71F520E /* Copy Pods Resources */,
+				3EEC72D849A44CE489E1277C /* Check Pods Manifest.lock */,
+				3CB0E6CF18C8B9E2009CE8DB /* Sources */,
+				3CB0E6D018C8B9E2009CE8DB /* Frameworks */,
+				3CB0E6D118C8B9E2009CE8DB /* Resources */,
+				CF0BCF3DED9E42FFAA600A20 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,45 +196,45 @@
 			);
 			name = Demo;
 			productName = Demo;
-			productReference = 3C51ADBD18D4BA1C00B3F53F /* Demo.app */;
+			productReference = 3CB0E6D318C8B9E2009CE8DB /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3C51ADDD18D4BA1C00B3F53F /* DemoTests */ = {
+		3CB0E6F318C8B9E2009CE8DB /* DemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C51ADF218D4BA1C00B3F53F /* Build configuration list for PBXNativeTarget "DemoTests" */;
+			buildConfigurationList = 3CB0E70818C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "DemoTests" */;
 			buildPhases = (
-				E7563930E00545C3AF3EB28F /* Check Pods Manifest.lock */,
-				3C51ADDA18D4BA1C00B3F53F /* Sources */,
-				3C51ADDB18D4BA1C00B3F53F /* Frameworks */,
-				3C51ADDC18D4BA1C00B3F53F /* Resources */,
-				D7644258CB574375BD10C444 /* Copy Pods Resources */,
+				BE3A7AB44CD649DE8FEEB154 /* Check Pods Manifest.lock */,
+				3CB0E6F018C8B9E2009CE8DB /* Sources */,
+				3CB0E6F118C8B9E2009CE8DB /* Frameworks */,
+				3CB0E6F218C8B9E2009CE8DB /* Resources */,
+				92777E9C63BE481285A7B3F2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3C51ADE418D4BA1C00B3F53F /* PBXTargetDependency */,
+				3CB0E6FA18C8B9E3009CE8DB /* PBXTargetDependency */,
 			);
 			name = DemoTests;
 			productName = DemoTests;
-			productReference = 3C51ADDE18D4BA1C00B3F53F /* DemoTests.xctest */;
+			productReference = 3CB0E6F418C8B9E2009CE8DB /* DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3C51ADB518D4BA1C00B3F53F /* Project object */ = {
+		3CB0E6CB18C8B9E2009CE8DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = AR;
+				CLASSPREFIX = NA;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Artsy;
 				TargetAttributes = {
-					3C51ADDD18D4BA1C00B3F53F = {
-						TestTargetID = 3C51ADBC18D4BA1C00B3F53F;
+					3CB0E6F318C8B9E2009CE8DB = {
+						TestTargetID = 3CB0E6D218C8B9E2009CE8DB;
 					};
 				};
 			};
-			buildConfigurationList = 3C51ADB818D4BA1C00B3F53F /* Build configuration list for PBXProject "Demo" */;
+			buildConfigurationList = 3CB0E6CE18C8B9E2009CE8DB /* Build configuration list for PBXProject "Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,55 +242,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 3C51ADB418D4BA1C00B3F53F;
-			productRefGroup = 3C51ADBE18D4BA1C00B3F53F /* Products */;
+			mainGroup = 3CB0E6CA18C8B9E2009CE8DB;
+			productRefGroup = 3CB0E6D418C8B9E2009CE8DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C51ADBC18D4BA1C00B3F53F /* Demo */,
-				3C51ADDD18D4BA1C00B3F53F /* DemoTests */,
+				3CB0E6D218C8B9E2009CE8DB /* Demo */,
+				3CB0E6F318C8B9E2009CE8DB /* DemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3C51ADBB18D4BA1C00B3F53F /* Resources */ = {
+		3CB0E6D118C8B9E2009CE8DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C51ADD918D4BA1C00B3F53F /* Images.xcassets in Resources */,
-				3C51ADCB18D4BA1C00B3F53F /* InfoPlist.strings in Resources */,
-				3C51ADD418D4BA1C00B3F53F /* Main.storyboard in Resources */,
+				3CB0E6EF18C8B9E2009CE8DB /* Images.xcassets in Resources */,
+				3CB0E6E118C8B9E2009CE8DB /* InfoPlist.strings in Resources */,
+				3CB0E72A18C8BC62009CE8DB /* ARMasterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C51ADDC18D4BA1C00B3F53F /* Resources */ = {
+		3CB0E6F218C8B9E2009CE8DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C51ADEA18D4BA1C00B3F53F /* InfoPlist.strings in Resources */,
+				3CB0E70018C8B9E3009CE8DB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6DB0BFACB136443FB71F520E /* Copy Pods Resources */ = {
+		3EEC72D849A44CE489E1277C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D7644258CB574375BD10C444 /* Copy Pods Resources */ = {
+		92777E9C63BE481285A7B3F2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,7 +305,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-DemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7563930E00545C3AF3EB28F /* Check Pods Manifest.lock */ = {
+		BE3A7AB44CD649DE8FEEB154 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,81 +320,84 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EB52B37955F241F6B35B1109 /* Check Pods Manifest.lock */ = {
+		CF0BCF3DED9E42FFAA600A20 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3C51ADB918D4BA1C00B3F53F /* Sources */ = {
+		3CB0E6CF18C8B9E2009CE8DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C51ADCD18D4BA1C00B3F53F /* main.m in Sources */,
-				3C51ADD718D4BA1C00B3F53F /* ARViewController.m in Sources */,
-				3C51ADD118D4BA1C00B3F53F /* ARAppDelegate.m in Sources */,
+				3CB0E72218C8BB08009CE8DB /* ARMasterViewController.m in Sources */,
+				3CB0E6E318C8B9E2009CE8DB /* main.m in Sources */,
+				3CB0E71C18C8BB08009CE8DB /* ARAppDelegate.m in Sources */,
+				3C7F86CD18CE609200F7091A /* ARTiledImageDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C51ADDA18D4BA1C00B3F53F /* Sources */ = {
+		3CB0E6F018C8B9E2009CE8DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C51ADF618D4C27300B3F53F /* ARTiledImageTests.m in Sources */,
+				3CB8E36718D4DEA40023AB71 /* ARTiledImageViewControllerTests.m in Sources */,
+				3CB8E36618D4DEA40023AB71 /* ARMasterViewControllerTests.m in Sources */,
+				3CB8E36818D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3C51ADE418D4BA1C00B3F53F /* PBXTargetDependency */ = {
+		3CB0E6FA18C8B9E3009CE8DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3C51ADBC18D4BA1C00B3F53F /* Demo */;
-			targetProxy = 3C51ADE318D4BA1C00B3F53F /* PBXContainerItemProxy */;
+			target = 3CB0E6D218C8B9E2009CE8DB /* Demo */;
+			targetProxy = 3CB0E6F918C8B9E3009CE8DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3C51ADC918D4BA1C00B3F53F /* InfoPlist.strings */ = {
+		3CB0E6DF18C8B9E2009CE8DB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3C51ADCA18D4BA1C00B3F53F /* en */,
+				3CB0E6E018C8B9E2009CE8DB /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3C51ADD218D4BA1C00B3F53F /* Main.storyboard */ = {
+		3CB0E6FE18C8B9E3009CE8DB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3C51ADD318D4BA1C00B3F53F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3C51ADE818D4BA1C00B3F53F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C51ADE918D4BA1C00B3F53F /* en */,
+				3CB0E6FF18C8B9E3009CE8DB /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3CB0E72818C8BC62009CE8DB /* ARMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CB0E72918C8BC62009CE8DB /* en */,
+			);
+			name = ARMasterViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3C51ADED18D4BA1C00B3F53F /* Debug */ = {
+		3CB0E70318C8B9E3009CE8DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,7 +436,7 @@
 			};
 			name = Debug;
 		};
-		3C51ADEE18D4BA1C00B3F53F /* Release */ = {
+		3CB0E70418C8B9E3009CE8DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -455,12 +469,16 @@
 			};
 			name = Release;
 		};
-		3C51ADF018D4BA1C00B3F53F /* Debug */ = {
+		3CB0E70618C8B9E3009CE8DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4885E4BEA464DFEAD0283CB /* Pods.xcconfig */;
+			baseConfigurationReference = BD0E280B71AE47E499695C40 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
@@ -469,12 +487,16 @@
 			};
 			name = Debug;
 		};
-		3C51ADF118D4BA1C00B3F53F /* Release */ = {
+		3CB0E70718C8B9E3009CE8DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4885E4BEA464DFEAD0283CB /* Pods.xcconfig */;
+			baseConfigurationReference = BD0E280B71AE47E499695C40 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
@@ -483,9 +505,9 @@
 			};
 			name = Release;
 		};
-		3C51ADF318D4BA1C00B3F53F /* Debug */ = {
+		3CB0E70918C8B9E3009CE8DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4470A99B8BDB4EBDAFEC7565 /* Pods-DemoTests.xcconfig */;
+			baseConfigurationReference = 93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
@@ -497,6 +519,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoTests/DemoTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"FB_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages\\\"\"",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -507,9 +530,9 @@
 			};
 			name = Debug;
 		};
-		3C51ADF418D4BA1C00B3F53F /* Release */ = {
+		3CB0E70A18C8B9E3009CE8DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4470A99B8BDB4EBDAFEC7565 /* Pods-DemoTests.xcconfig */;
+			baseConfigurationReference = 93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
@@ -520,6 +543,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoTests/DemoTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "DemoTests/DemoTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -530,34 +554,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C51ADB818D4BA1C00B3F53F /* Build configuration list for PBXProject "Demo" */ = {
+		3CB0E6CE18C8B9E2009CE8DB /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C51ADED18D4BA1C00B3F53F /* Debug */,
-				3C51ADEE18D4BA1C00B3F53F /* Release */,
+				3CB0E70318C8B9E3009CE8DB /* Debug */,
+				3CB0E70418C8B9E3009CE8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C51ADEF18D4BA1C00B3F53F /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		3CB0E70518C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C51ADF018D4BA1C00B3F53F /* Debug */,
-				3C51ADF118D4BA1C00B3F53F /* Release */,
+				3CB0E70618C8B9E3009CE8DB /* Debug */,
+				3CB0E70718C8B9E3009CE8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C51ADF218D4BA1C00B3F53F /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
+		3CB0E70818C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C51ADF318D4BA1C00B3F53F /* Debug */,
-				3C51ADF418D4BA1C00B3F53F /* Release */,
+				3CB0E70918C8B9E3009CE8DB /* Debug */,
+				3CB0E70A18C8B9E3009CE8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3C51ADB518D4BA1C00B3F53F /* Project object */;
+	rootObject = 3CB0E6CB18C8B9E2009CE8DB /* Project object */;
 }

@@ -1,8 +1,8 @@
 //
 //  ARAppDelegate.h
-//  Demo
+//  ARTiledImage
 //
-//  Created by Daniel Doubrovkine on 3/15/14.
+//  Created by Daniel Doubrovkine on 3/10/14.
 //  Copyright (c) 2014 Artsy. All rights reserved.
 //
 
@@ -11,5 +11,6 @@
 @interface ARAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end
