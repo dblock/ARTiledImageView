@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: ../ARTiledImage.podspec
 
 SPEC CHECKSUMS:
-  ARTiledImage: 8c80509b581ac98992c82e490b478d01dbaf12e2
+  ARTiledImage: a73a223f74295c10353243bb75801f5d4524dbe1
   Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
   EXPMatchers+FBSnapshotTest: 1b9506577e494191565ff51ffd5b1e76339d727b
   FBSnapshotTestCase: 188c80bfcb72e744eb0b99d45989d12687c40cf8

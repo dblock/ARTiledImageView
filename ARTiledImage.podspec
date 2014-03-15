@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description      = "Display, pan and deep zoom with tiled images."
   s.homepage         = "https://github.com/dblock/ARTiledImage"
   s.screenshots      = "https://raw.github.com/dblock/ARTiledImage/Demo/Screenshots/ArmoryShow.png"
-  s.license          = "MIT""
+  s.license          = "MIT"
   s.author           = { "dblock" => "dblock@dblock.org", "orta" => "orta.therox@gmail.com" }
   s.source           = { :git => "https://github.com/dblock/ARTiledImage.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dblockdotorg'

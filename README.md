@@ -1,5 +1,6 @@
 # ARTiledImage
 
+[![Build Status](https://travis-ci.org/dblock/ARTiledImage.png)](https://travis-ci.org/dblock/ARTiledImage)
 [![Version](http://cocoapod-badges.herokuapp.com/v/ARTiledImage/badge.png)](http://cocoadocs.org/docsets/ARTiledImage)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/ARTiledImage/badge.png)](http://cocoadocs.org/docsets/ARTiledImage)
 
