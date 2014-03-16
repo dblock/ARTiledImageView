@@ -50,14 +50,21 @@ ARTiledImageView is available through [CocoaPods](http://cocoapods.org), to inst
 
     pod "ARTiledImageView"
 
+## Testing
+
+Try it out with CocoaPods also,
+
+    pod try "ARTiledImageView"
+
 ## Credits
 
 ARTiledImageView was written by [@orta](https://github.com/orta), with contributions from [@speednoisemovement](https://github.com/speednoisemovement) and [@dblock](https://github.com/dblock).
+
+Some of the ARTiledImageScrollView comes from [NAMapKit](https://github.com/neilang/NAMapKit)
 
 ## Copyright & License
 
 ARTiledImageView is (c) [Artsy Inc.](http://artsy.net), available under the MIT license.
 
 See the [LICENSE](LICENSE) file for more information.
-
 

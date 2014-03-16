@@ -9,8 +9,10 @@
 #import "ARTiledImageViewDataSource.h"
 
 /**
- *  A tiled image view.
+ *  A tiled image view for going inside UIScrollViews
+ *  pulling in images asynchronously or from local caches. 
  */
+
 @interface ARTiledImageView : UIView
 
 - (id)initWithFrame:(CGRect)frame __attribute__((unavailable("Please use initWithDataSource:")));
