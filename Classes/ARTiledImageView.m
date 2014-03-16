@@ -10,7 +10,7 @@
 #import <QuartzCore/CATiledLayer.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-// An internal object corresponding an image with a rect for drawing to
+// An internal object corresponding an image with a rect for drawing to.
 
 @interface ARTile : NSObject
 @property (nonatomic, assign) CGRect tileRect;
@@ -32,7 +32,7 @@
 @end
 
 // ARTiledImageView responds to rectangle repaint, figures out which tile
-//  to download from that rectangle and downloads tiles asynchronously.
+// to download from that rectangle and downloads tiles asynchronously.
 // It will cache images in SDWebCache and optionally store images locally.
 
 @interface ARTiledImageView ()

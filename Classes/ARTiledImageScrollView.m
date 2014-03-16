@@ -62,7 +62,7 @@ const CGFloat defaultZoomStep = 1.5f;
     CGSize boundsSize = self.bounds.size;
     CGSize imageSize = [self.dataSource imageSizeForImageView:nil];
 
-    // Calculate min/max zoomscale
+    // Calculate min/max zoomscale.
     CGFloat xScale = boundsSize.width / imageSize.width; // the scale needed to perfectly fit the image width-wise
     CGFloat yScale = boundsSize.height / imageSize.height; // the scale needed to perfectly fit the image height-wise
     CGFloat minScale = MAX(xScale, yScale); // use minimum of these to allow the image to become fully visible
@@ -70,7 +70,7 @@ const CGFloat defaultZoomStep = 1.5f;
     CGFloat maxScale = 1.0;
 
     // Don't let minScale exceed maxScale.
-    // If the image is smaller than the screen, we don't want to force it to be zoomed
+    // If the image is smaller than the screen, we don't want to force it to be zoomed.
     if (minScale > maxScale) {
         minScale = maxScale;
     }
@@ -92,7 +92,7 @@ const CGFloat defaultZoomStep = 1.5f;
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
     self.backgroundImageView.frame = self.tiledImageView.frame;
-    // TODO: delegate that tile level has changed
+    // TODO: Delegate that tile level has changed.
 }
 
 
@@ -157,7 +157,7 @@ const CGFloat defaultZoomStep = 1.5f;
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer
 {
-    // Double tap zooms in, but returns to normal zoom level if it reaches max zoom
+    // Double tap zooms in, but returns to normal zoom level if it reaches max zoom.
     if (self.zoomScale >= self.maximumZoomScale) {
         [self setZoomScale:self.minimumZoomScale animated:YES];
     } else {
@@ -188,7 +188,7 @@ const CGFloat defaultZoomStep = 1.5f;
 
 - (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer
 {
-    // Two-finger tap zooms out, but returns to normal zoom level if it reaches min zoom
+    // Two-finger tap zooms out, but returns to normal zoom level if it reaches min zoom.
     CGFloat newScale = self.zoomScale <= self.minimumZoomScale ? self.maximumZoomScale : self.zoomScale / (self.zoomStep ? : defaultZoomStep);
     [self setZoomScale:newScale animated:YES];
 }

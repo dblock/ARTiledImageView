@@ -19,7 +19,7 @@
 /// Zoom the image to fit the current display.
 - (void)zoomToFit:(BOOL)animate;
 
-/// The data source for image
+/// The data source for image.
 @property (readwrite, nonatomic, weak) NSObject <ARTiledImageViewDataSource> *dataSource;
 
 /// Display tile borders, usually for debugging purposes.
@@ -28,7 +28,7 @@
 /// Set a background image, displayed while tiles are being downloaded.
 @property (readwrite, nonatomic) NSURL *backgroundImageURL;
 
-/// Point on which to center the map by default, removed when panned
+/// Point on which to center the map by default, removed when panned.
 @property (nonatomic, assign) CGPoint centerPoint;
 
 /// Size of the view, typically the full size of the background image.
