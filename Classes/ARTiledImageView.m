@@ -131,7 +131,9 @@
             }
 
             if (!tile.tileImage) {
-                [requestURLs addObject:tileURL];
+                if (tileURL) {
+                    [requestURLs addObject:tileURL];
+                }
             } else {
                 [tile.tileImage drawInRect:tile.tileRect blendMode:kCGBlendModeNormal alpha:1];
                 if (self.displayTileBorders) {

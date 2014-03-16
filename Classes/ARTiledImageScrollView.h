@@ -20,7 +20,7 @@
 - (void)zoomToFit:(BOOL)animate;
 
 /// The data source for image.
-@property (readwrite, nonatomic, weak) NSObject <ARTiledImageViewDataSource> *dataSource;
+@property (readwrite, nonatomic, strong) NSObject <ARTiledImageViewDataSource> *dataSource;
 
 /// Display tile borders, usually for debugging purposes.
 @property (readwrite, nonatomic, assign) BOOL displayTileBorders;
