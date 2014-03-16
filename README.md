@@ -28,19 +28,21 @@ ds.tileSize = 512;
 ds.tileFormat = @"jpg";
 // location of tiles, organized in subfolders, one per level
 ds.tileBaseURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia/tiles"];
+// make sure to retain the datasource
+_dataSource = ds;
 
-ARTiledImageScrollView *v = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
+ARTiledImageScrollView *sv = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
 // set datasource
-v.dataSource = ds;
+sv.dataSource = ds;
 // default background color
-v.backgroundColor = [UIColor grayColor];
+sv.backgroundColor = [UIColor grayColor];
 // default stretched placeholder image
-v.backgroundImageURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia/large.jpg"];
+sv.backgroundImageURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia/large.jpg"];
 // display tile borders, for debugging
-v.displayTileBorders = NO;
+sv.displayTileBorders = NO;
 
 // add as a subview to another view
-[self.view addSubview:v];
+[self.view addSubview:sv];
 ```
 
 ## Installation

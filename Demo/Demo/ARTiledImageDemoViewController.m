@@ -11,14 +11,15 @@
 #import "ARWebTiledImageDataSource.h"
 
 @interface ARTiledImageDemoViewController ()
-@property (nonatomic, readonly) ARTiledImageScrollView *imageScrollView;
+@property (nonatomic, readonly) ARTiledImageScrollView *scrollView;
+@property (nonatomic, readonly) ARWebTiledImageDataSource *dataSource;
 @end
 
 @implementation ARTiledImageDemoViewController
 
 - (void)setDisplayTileBorders:(BOOL)displayTileBorders
 {
-    self.imageScrollView.displayTileBorders = displayTileBorders;
+    self.scrollView.displayTileBorders = displayTileBorders;
     _displayTileBorders = displayTileBorders;
 }
 
@@ -27,29 +28,30 @@
 {
     [super viewDidLoad];
 
-    ARWebTiledImageDataSource *webTileImageDataSource = [[ARWebTiledImageDataSource alloc] init];
-    webTileImageDataSource.maxTiledHeight = self.tiledSize.height;
-    webTileImageDataSource.maxTiledWidth = self.tiledSize.width;
-    webTileImageDataSource.minTileLevel = self.minTileLevel;
-    webTileImageDataSource.maxTileLevel = self.maxTileLevel;
-    webTileImageDataSource.tileSize = 512;
-    webTileImageDataSource.tileFormat = @"jpg";
-    webTileImageDataSource.tileBaseURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/tiles", self.tilesURL.absoluteString]];
+    ARWebTiledImageDataSource *ds = [[ARWebTiledImageDataSource alloc] init];
+    ds.maxTiledHeight = self.tiledSize.height;
+    ds.maxTiledWidth = self.tiledSize.width;
+    ds.minTileLevel = self.minTileLevel;
+    ds.maxTileLevel = self.maxTileLevel;
+    ds.tileSize = 512;
+    ds.tileFormat = @"jpg";
+    ds.tileBaseURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/tiles", self.tilesURL.absoluteString]];
+    _dataSource = ds;
 
-    ARTiledImageScrollView *imageScrollView = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
-    imageScrollView.dataSource = webTileImageDataSource;
-    imageScrollView.backgroundColor = [UIColor grayColor];
-    imageScrollView.backgroundImageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/large.jpg", self.tilesURL.absoluteString]];
-    imageScrollView.displayTileBorders = self.displayTileBorders;
-    _imageScrollView = imageScrollView;
+    ARTiledImageScrollView *sv = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
+    sv.dataSource = ds;
+    sv.backgroundColor = [UIColor grayColor];
+    sv.backgroundImageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/large.jpg", self.tilesURL.absoluteString]];
+    sv.displayTileBorders = self.displayTileBorders;
+    _scrollView = sv;
 
-    [self.view addSubview:imageScrollView];
+    [self.view addSubview:self.scrollView];
 }
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.imageScrollView zoomToFit:animated];
+    [self.scrollView zoomToFit:animated];
 }
 
 
