@@ -9,6 +9,7 @@
 @interface ARTiledImageDemoViewController : UIViewController
 
 @property (readwrite, nonatomic, strong) NSURL *tilesURL;
+@property (readwrite, nonatomic, copy) NSString *tilesPath;
 
 @property (readwrite, nonatomic, assign) BOOL displayTileBorders;
 @property (readwrite, nonatomic, assign) CGSize tiledSize;

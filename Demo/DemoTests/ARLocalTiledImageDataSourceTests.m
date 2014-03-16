@@ -1,38 +1,33 @@
 //
-//  ARWebTiledImageDataSourceTests.m
+//  ARLocalTiledImageDataSourceTests.m
 //  ARTiledImageView
 //
 //  Created by Daniel Doubrovkine on 3/15/14.
 //  Copyright (c) 2014 Artsy. All rights reserved.
 //
 
-#import "ARWebTiledImageDataSource.h"
+#import "ARLocalTiledImageDataSource.h"
 
-SpecBegin(ARWebTiledImageDataSourceTests)
+SpecBegin(ARLocalTiledImageDataSourceTests)
 
-__block ARWebTiledImageDataSource *ds = nil;
+__block ARLocalTiledImageDataSource *ds = nil;
 
 beforeEach(^{
-    ds = [[ARWebTiledImageDataSource alloc] init];
+    ds = [[ARLocalTiledImageDataSource alloc] init];
     ds.maxTiledHeight = 5389;
     ds.maxTiledWidth = 5000;
     ds.minTileLevel = 11;
     ds.maxTileLevel = 13;
     ds.tileSize = 512;
     ds.tileFormat = @"jpg";
-    ds.tileBaseURL = [NSURL URLWithString:@"https://example.com/tiles"];
+    ds.tileBasePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tiles/Armory2014/tiles"];
 });
 
-it(@"tiledImageView:urlForImageTileAtLevel:level:x:y:", ^{
-    expect([ds tiledImageView:nil urlForImageTileAtLevel:1 x:2 y:3]).to.equal([NSURL URLWithString:@"https://example.com/tiles/1/2_3.jpg"]);
-});
-
-pending(@"tiledImageView:imageTileForLevel:level:x:y:", ^{
-
-});
-
-pending(@"didDownloadTiledImage:atURL:", ^{
-
+it(@"tiledImageView:imageTileForLevel:level:x:y:", ^{
+    // tile level doesn't exist
+    expect([ds tiledImageView:nil imageTileForLevel:5 x:1 y:2]).to.beNil();
+    // tile level exists
+    expect([ds tiledImageView:nil imageTileForLevel:12 x:1 y:2]).to.beKindOf([UIImage class]);
 });
 
 it(@"imageSizeForImageView:", ^{

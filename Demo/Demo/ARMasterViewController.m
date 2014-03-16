@@ -5,6 +5,8 @@
 //  Created by Daniel Doubrovkine on 3/10/14.
 //  Copyright (c) 2014 Artsy. All rights reserved.
 //
+// Goya painting, Courtesy National Gallery of Art, Washington, via Artsy
+// https://artsy.net/artwork/francisco-jose-de-goya-y-lucientes-senora-sabasa-garcia
 
 #import "ARMasterViewController.h"
 #import "ARTiledImageDemoViewController.h"
@@ -31,7 +33,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 
@@ -47,13 +49,16 @@
 
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"Armory 2014 Map";
+            cell.textLabel.text = @"Armory 2014 (Web)";
             break;
         case 1:
-            cell.textLabel.text = @"Armory 2014 (w/Grid)";
+            cell.textLabel.text = @"Armory 2014 (Web, w/Grid)";
             break;
         case 2:
-            cell.textLabel.text = @"Goya: Señora Sabasa Garcia";
+            cell.textLabel.text = @"Goya: Señora S. Garcia (Local)";
+            break;
+        case 3:
+            cell.textLabel.text = @"Goya: Señora S. Garcia (Web)";
             break;
         default:
             break;
@@ -84,8 +89,14 @@
 
     } else if (indexPath.row == 2) {
         ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
-        // https://artsy.net/artwork/francisco-jose-de-goya-y-lucientes-senora-sabasa-garcia
-        // (Courtesy National Gallery of Art, Washington)
+        vc.tilesPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tiles/SenoraSabasaGarcia"];
+        vc.tiledSize = CGSizeMake(2383, 2933);
+        vc.minTileLevel = 11;
+        vc.maxTileLevel = 12;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } else if (indexPath.row == 3) {
+        ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
         vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia"];
         vc.tiledSize = CGSizeMake(2383, 2933);
         vc.minTileLevel = 11;

@@ -45,6 +45,10 @@ sv.displayTileBorders = NO;
 [self.view addSubview:sv];
 ```
 
+## Tiles and Data Sources
+
+A typical organization for deep zoom map tiles consists of a folder for each zoom level and individual JPG files for each tile. You can see an example of such files [here](Demo/Tiles/SenoraSabasaGarcia/tiles). ARTiledImageView comes with a local [ARLocalTiledImageDataSource](Classes/ARLocalTiledImageDataSource.h), which retrieves tile files from local storage, and a remote [ARWebTiledImageDataSource](Classes/ARWebTiledImageDataSource.h) data source, which retrieves map tiles from a remote URL and stores them in *Library/Caches* (NSCachesDirectory).
+
 ## Installation
 
 ARTiledImageView is available through [CocoaPods](http://cocoapods.org), to install it simply add the following line to your Podfile:
@@ -59,7 +63,7 @@ Try it out with CocoaPods also,
 
 ## Credits
 
-ARTiledImageView was originally written by [@orta](https://github.com/orta), with contributions from [@speednoisemovement](https://github.com/speednoisemovement) and [@dblock](https://github.com/dblock). Some of the implementation in ARTiledImageScrollView comes from [NAMapKit](https://github.com/neilang/NAMapKit)
+ARTiledImageView was originally written by [@orta](https://github.com/orta), with contributions from [@speednoisemovement](https://github.com/speednoisemovement) and [@dblock](https://github.com/dblock). Some of the implementation in [ARTiledImageScrollView](Classes/ARTiledImageScrollView.m) comes from [NAMapKit](https://github.com/neilang/NAMapKit)
 
 ## Copyright & License
 

@@ -109,21 +109,21 @@
     NSInteger level = self.maxLevelOfDetail + roundf(log2f(_scaleX));
     _currentZoomLevel = level;
 
-    NSMutableArray *requestURLs = [NSMutableArray array];
+    BOOL isRemote = [self.dataSource respondsToSelector:@selector(tiledImageView:urlForImageTileAtLevel:x:y:)];
+    NSMutableDictionary *requestURLs = isRemote ? [NSMutableDictionary dictionary] : nil;
+    
     for (NSInteger row = firstRow; row <= lastRow; row++) {
         for (NSInteger col = firstCol; col <= lastCol; col++) {
 
             CGRect tileRect = CGRectMake(tileSize.width * col, tileSize.height * row, tileSize.width, tileSize.height);
             UIImage *tileImage = [self.dataSource tiledImageView:self imageTileForLevel:level x:col y:row];
 
-            BOOL supportsURLTiles = [self.dataSource respondsToSelector:@selector(tiledImageView:urlForImageTileAtLevel:x:y:)];
-            NSURL *tileURL = supportsURLTiles ? [self.dataSource tiledImageView:self urlForImageTileAtLevel:level x:col y:row] : nil;
-
-            ARTile *tile = [self.tileCache objectForKey:[tileURL absoluteString]];
+            NSString *tileCacheKey = [NSString stringWithFormat:@"%@/%@_%@", @(level), @(col), @(row)];
+            ARTile *tile = [self.tileCache objectForKey:tileCacheKey];
             if (!tile) {
                 tileRect = CGRectIntersection(self.bounds, tileRect);
                 tile = [[ARTile alloc] initWithImage:tileImage rect:tileRect];
-                [self.tileCache setObject:tile forKey:[tileURL absoluteString] cost:level];
+                [self.tileCache setObject:tile forKey:tileCacheKey cost:level];
             }
 
             if (!tile.tileImage && tileImage) {
@@ -131,8 +131,9 @@
             }
 
             if (!tile.tileImage) {
-                if (tileURL) {
-                    [requestURLs addObject:tileURL];
+                if (isRemote) {
+                    NSURL *tileURL = [self.dataSource tiledImageView:self urlForImageTileAtLevel:level x:col y:row];
+                    [requestURLs setValue:tileURL forKey:tileCacheKey];
                 }
             } else {
                 [tile.tileImage drawInRect:tile.tileRect blendMode:kCGBlendModeNormal alpha:1];
@@ -145,8 +146,8 @@
         }
     }
 
-    if (requestURLs.count && [self isKindOfClass:[ARTiledImageView class]]) {
-        [self downloadAndRedrawTilesWithURLs:[NSArray arrayWithArray:requestURLs]];
+    if (requestURLs.count) {
+        [self downloadAndRedrawTilesWithURLs:requestURLs];
     }
 }
 
@@ -164,12 +165,13 @@
 }
 
 
-- (void)downloadAndRedrawTilesWithURLs:(NSArray *)arrayOfURLs
+- (void)downloadAndRedrawTilesWithURLs:(NSDictionary *)urls
 {
     __weak typeof (self) wself = self;
 
-    for (NSURL *tileURL in arrayOfURLs) {
-        if ([self.downloadOperations objectForKey:tileURL]) {
+    for (NSString *tileCacheKey in urls.keyEnumerator) {
+        NSURL *tileURL = [urls objectForKey:tileCacheKey];
+        if ([self.downloadOperations objectForKey:tileCacheKey]) {
             continue;
         }
 
@@ -181,7 +183,7 @@
 
             if (error) {
                 // TODO: we want to mke sure this doesn't happen multiple times
-                [wself performSelector:_cmd withObject:arrayOfURLs afterDelay:1];
+                [wself performSelector:_cmd withObject:urls afterDelay:1];
                 return;
             }
 
@@ -192,7 +194,7 @@
                 }
 
                 if (image) {
-                    ARTile *tile = [sself.tileCache objectForKey:[tileURL absoluteString]];
+                    ARTile *tile = [sself.tileCache objectForKey:tileCacheKey];
                     if (!tile) {
                         return;
                     }
@@ -202,7 +204,7 @@
 
                     // Overwrite the existing object in cache now that we have a real cost
                     NSInteger cost = image.size.height * image.size.width * image.scale;
-                    [sself.tileCache setObject:tile forKey:[tileURL absoluteString] cost:cost];
+                    [sself.tileCache setObject:tile forKey:tileCacheKey cost:cost];
 
                     if ([sself.dataSource respondsToSelector:@selector(tiledImageView:didDownloadTiledImage:atURL:)]) {
                         [sself.dataSource tiledImageView:self didDownloadTiledImage:image atURL:tileURL];
@@ -210,7 +212,7 @@
                 }
 
                 @synchronized (sself.downloadOperations) {
-                    [sself.downloadOperations removeObjectForKey:tileURL];
+                    [sself.downloadOperations removeObjectForKey:tileCacheKey];
                 }
             };
 
@@ -222,11 +224,10 @@
         }];
 
         @synchronized (self.downloadOperations) {
-            [self.downloadOperations setObject:operation forKey:tileURL];
+            [self.downloadOperations setObject:operation forKey:tileCacheKey];
         }
     }
 }
-
 
 - (void)dealloc
 {

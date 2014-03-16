@@ -26,6 +26,9 @@
 		3CB8E36618D4DEA40023AB71 /* ARMasterViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E36318D4DEA40023AB71 /* ARMasterViewControllerTests.m */; };
 		3CB8E36718D4DEA40023AB71 /* ARTiledImageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E36418D4DEA40023AB71 /* ARTiledImageViewControllerTests.m */; };
 		3CB8E36818D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */; };
+		3CB8E5BD18D6239C0023AB71 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8E5BC18D6239C0023AB71 /* Tiles */; };
+		3CB8E5BE18D623AE0023AB71 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8E5BC18D6239C0023AB71 /* Tiles */; };
+		3CB8E5C118D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,8 @@
 		3CB8E36318D4DEA40023AB71 /* ARMasterViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMasterViewControllerTests.m; sourceTree = "<group>"; };
 		3CB8E36418D4DEA40023AB71 /* ARTiledImageViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageViewControllerTests.m; sourceTree = "<group>"; };
 		3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARWebTiledImageDataSourceTests.m; sourceTree = "<group>"; };
+		3CB8E5BC18D6239C0023AB71 /* Tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tiles; sourceTree = SOURCE_ROOT; };
+		3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLocalTiledImageDataSourceTests.m; sourceTree = "<group>"; };
 		93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.xcconfig"; path = "Pods/Pods-DemoTests.xcconfig"; sourceTree = "<group>"; };
 		98DB4ADA533041DD9D9E7647 /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0E280B71AE47E499695C40 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -132,6 +137,7 @@
 		3CB0E6DC18C8B9E2009CE8DB /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				3CB8E5BC18D6239C0023AB71 /* Tiles */,
 				3CB0E72818C8BC62009CE8DB /* ARMasterViewController.xib */,
 				3CB0E70D18C8BB08009CE8DB /* ARAppDelegate.h */,
 				3CB0E70E18C8BB08009CE8DB /* ARAppDelegate.m */,
@@ -163,6 +169,7 @@
 				3CB8E36418D4DEA40023AB71 /* ARTiledImageViewControllerTests.m */,
 				3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */,
 				3CB0E6FC18C8B9E3009CE8DB /* Supporting Files */,
+				3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */,
 			);
 			path = DemoTests;
 			sourceTree = "<group>";
@@ -260,6 +267,7 @@
 			files = (
 				3CB0E6EF18C8B9E2009CE8DB /* Images.xcassets in Resources */,
 				3CB0E6E118C8B9E2009CE8DB /* InfoPlist.strings in Resources */,
+				3CB8E5BD18D6239C0023AB71 /* Tiles in Resources */,
 				3CB0E72A18C8BC62009CE8DB /* ARMasterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB8E5BE18D623AE0023AB71 /* Tiles in Resources */,
 				3CB0E70018C8B9E3009CE8DB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB8E36718D4DEA40023AB71 /* ARTiledImageViewControllerTests.m in Sources */,
+				3CB8E5C118D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m in Sources */,
 				3CB8E36618D4DEA40023AB71 /* ARMasterViewControllerTests.m in Sources */,
 				3CB8E36818D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m in Sources */,
 			);
