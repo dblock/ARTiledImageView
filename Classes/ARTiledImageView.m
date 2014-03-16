@@ -10,6 +10,8 @@
 #import <QuartzCore/CATiledLayer.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
+// An internal object corresponding an image with a rect for drawing to
+
 @interface ARTile : NSObject
 @property (nonatomic, assign) CGRect tileRect;
 @property (nonatomic, strong) UIImage *tileImage;
@@ -17,7 +19,7 @@
 
 @implementation ARTile : NSObject
 
--(instancetype)initWithImage:(UIImage *)anImage rect:(CGRect)rect
+- (instancetype)initWithImage:(UIImage *)anImage rect:(CGRect)rect
 {
     self = [super init];
     if (self == nil) return nil;
@@ -29,8 +31,10 @@
 }
 @end
 
-// ARTiledImageView responds to rectangle repaint, figures out which tile to download from that rectangle and downloads tiles asynchronously.
-// It will cache images in SDWebCache and store images in local storage.
+// ARTiledImageView responds to rectangle repaint, figures out which tile
+//  to download from that rectangle and downloads tiles asynchronously.
+// It will cache images in SDWebCache and optionally store images locally.
+
 @interface ARTiledImageView ()
 @property (nonatomic, assign) NSInteger maxLevelOfDetail;
 @property (atomic, strong, readonly) NSCache *tileCache;
@@ -39,30 +43,32 @@
 
 @implementation ARTiledImageView
 
--(id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource;
+- (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource;
 {
     self = [super init];
-    if (self) {
-        self.backgroundColor = [UIColor clearColor];
-        _dataSource = dataSource;
+    if (!self) return nil;
 
-        CATiledLayer *layer = (id)[self layer];
-        layer.tileSize = [_dataSource tileSizeForImageView:self];
+    self.backgroundColor = [UIColor clearColor];
+    _dataSource = dataSource;
 
-        NSInteger min = [_dataSource minimumImageZoomLevelForImageView:self];
-        NSInteger max = [_dataSource maximumImageZoomLevelForImageView:self];
-        layer.levelsOfDetail = max - min + 1;
+    CATiledLayer *layer = (id) [self layer];
+    layer.tileSize = [_dataSource tileSizeForImageView:self];
 
-        self.maxLevelOfDetail = max;
+    NSInteger min = [_dataSource minimumImageZoomLevelForImageView:self];
+    NSInteger max = [_dataSource maximumImageZoomLevelForImageView:self];
+    layer.levelsOfDetail = max - min + 1;
 
-        CGSize imagesize = [dataSource imageSizeForImageView:self];
-        self.frame = CGRectMake(0, 0, imagesize.width, imagesize.height);
+    self.maxLevelOfDetail = max;
 
-        _tileCache = [[NSCache alloc] init];
-        _downloadOperations = [[NSMutableDictionary alloc] init];
-    }
+    CGSize imagesize = [dataSource imageSizeForImageView:self];
+    self.frame = CGRectMake(0, 0, imagesize.width, imagesize.height);
+
+    _tileCache = [[NSCache alloc] init];
+    _downloadOperations = [[NSMutableDictionary alloc] init];
+
     return self;
 }
+
 
 - (void)drawRect:(CGRect)rect
 {
@@ -70,7 +76,6 @@
 
     //
     // See http://openradar.appspot.com/8503490
-    //
     // Get the scale from the context by getting the current transform matrix, then asking for its "a" component, which is one of the two scale components.
     // We need to also ask for the "d" component as it might not be precisely the same as the "a" component, even at the "same" scale.
     //
@@ -78,7 +83,7 @@
     CGFloat _scaleX = CGContextGetCTM(context).a;
     CGFloat _scaleY = CGContextGetCTM(context).d;
 
-    CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
+    CATiledLayer *tiledLayer = (CATiledLayer *) [self layer];
     CGSize tileSize = tiledLayer.tileSize;
 
     //
@@ -97,9 +102,9 @@
     tileSize.height /= -_scaleY;
 
     NSInteger firstCol = floor(CGRectGetMinX(rect) / tileSize.width);
-    NSInteger lastCol = floor((CGRectGetMaxX(rect)-1) / tileSize.width);
+    NSInteger lastCol = floor((CGRectGetMaxX(rect) - 1) / tileSize.width);
     NSInteger firstRow = floorf(CGRectGetMinY(rect) / tileSize.height);
-    NSInteger lastRow = floorf((CGRectGetMaxY(rect)-1) / tileSize.height);
+    NSInteger lastRow = floorf((CGRectGetMaxY(rect) - 1) / tileSize.height);
 
     NSInteger level = self.maxLevelOfDetail + roundf(log2f(_scaleX));
     _currentZoomLevel = level;
@@ -110,20 +115,22 @@
 
             CGRect tileRect = CGRectMake(tileSize.width * col, tileSize.height * row, tileSize.width, tileSize.height);
             UIImage *tileImage = [self.dataSource tiledImageView:self imageTileForLevel:level x:col y:row];
-            NSURL *tileURL = [self.dataSource tiledImageView:self urlForImageTileAtLevel:level x:col y:row];
+
+            BOOL supportsURLTiles = [self.dataSource respondsToSelector:@selector(tiledImageView:urlForImageTileAtLevel:x:y:)];
+            NSURL *tileURL = supportsURLTiles ? [self.dataSource tiledImageView:self urlForImageTileAtLevel:level x:col y:row] : nil;
 
             ARTile *tile = [self.tileCache objectForKey:[tileURL absoluteString]];
-            if (! tile) {
+            if (!tile) {
                 tileRect = CGRectIntersection(self.bounds, tileRect);
                 tile = [[ARTile alloc] initWithImage:tileImage rect:tileRect];
                 [self.tileCache setObject:tile forKey:[tileURL absoluteString] cost:level];
             }
 
-            if (! tile.tileImage && tileImage) {
+            if (!tile.tileImage && tileImage) {
                 tile.tileImage = tileImage;
             }
 
-            if (! tile.tileImage) {
+            if (!tile.tileImage) {
                 [requestURLs addObject:tileURL];
             } else {
                 [tile.tileImage drawInRect:tile.tileRect blendMode:kCGBlendModeNormal alpha:1];
@@ -136,45 +143,49 @@
         }
     }
 
-    if (requestURLs.count && self && [self isKindOfClass:[ARTiledImageView class]]) {
+    if (requestURLs.count && [self isKindOfClass:[ARTiledImageView class]]) {
         [self downloadAndRedrawTilesWithURLs:[NSArray arrayWithArray:requestURLs]];
     }
 }
 
-+(Class)layerClass
+
++ (Class)layerClass
 {
     return [CATiledLayer class];
 }
 
--(void)setContentScaleFactor:(CGFloat)contentScaleFactor
+
+- (void)setContentScaleFactor:(CGFloat)contentScaleFactor
 {
+    // Make retina perform as expected
     [super setContentScaleFactor:1.f];
 }
 
--(void)downloadAndRedrawTilesWithURLs:(NSArray *)arrayOfURLs
-{
-    __weak typeof(self) wself = self;
 
-    for(NSURL *tileURL in arrayOfURLs) {
+- (void)downloadAndRedrawTilesWithURLs:(NSArray *)arrayOfURLs
+{
+    __weak typeof (self) wself = self;
+
+    for (NSURL *tileURL in arrayOfURLs) {
         if ([self.downloadOperations objectForKey:tileURL]) {
             continue;
         }
 
-        id<SDWebImageOperation> operation = nil;
+        id <SDWebImageOperation> operation = nil;
         operation = [SDWebImageManager.sharedManager downloadWithURL:tileURL options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
-            if (!wself || !finished ) {
+            if (!wself || !finished) {
                 return;
             }
 
-            if (error){
+            if (error) {
                 // TODO: we want to mke sure this doesn't happen multiple times
                 [wself performSelector:_cmd withObject:arrayOfURLs afterDelay:1];
                 return;
             }
 
             void (^block)(void) = ^{
-                __strong typeof(wself) sself = wself;
-                if (! sself) {
+                __strong typeof (wself) sself = wself;
+                if (!sself) {
                     return;
                 }
 
@@ -191,12 +202,12 @@
                     NSInteger cost = image.size.height * image.size.width * image.scale;
                     [sself.tileCache setObject:tile forKey:[tileURL absoluteString] cost:cost];
 
-                    if([sself.dataSource respondsToSelector:@selector(tiledImageView:didDownloadTiledImage:atURL:)]) {
+                    if ([sself.dataSource respondsToSelector:@selector(tiledImageView:didDownloadTiledImage:atURL:)]) {
                         [sself.dataSource tiledImageView:self didDownloadTiledImage:image atURL:tileURL];
                     }
                 }
 
-                @synchronized(sself.downloadOperations) {
+                @synchronized (sself.downloadOperations) {
                     [sself.downloadOperations removeObjectForKey:tileURL];
                 }
             };
@@ -208,22 +219,24 @@
             }
         }];
 
-        @synchronized(self.downloadOperations) {
+        @synchronized (self.downloadOperations) {
             [self.downloadOperations setObject:operation forKey:tileURL];
         }
     }
 }
 
--(void)dealloc
+
+- (void)dealloc
 {
     [self cancelConcurrentDownloads];
     [_tileCache removeAllObjects];
 }
 
--(void)cancelConcurrentDownloads
+
+- (void)cancelConcurrentDownloads
 {
-    @synchronized(self.downloadOperations) {
-        for(id<SDWebImageOperation> operation in self.downloadOperations.objectEnumerator) {
+    @synchronized (self.downloadOperations) {
+        for (id <SDWebImageOperation> operation in self.downloadOperations.objectEnumerator) {
             if (operation) {
                 [operation cancel];
             }

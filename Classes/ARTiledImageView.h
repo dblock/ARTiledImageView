@@ -13,17 +13,22 @@
  */
 @interface ARTiledImageView : UIView
 
-// Initialize with a data source.
+- (id)initWithFrame:(CGRect)frame __attribute__((unavailable("Please use initWithDataSource:")));
+
+/// Initialize with a data source.
 - (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource;
-// Cancel any pending tile downloads.
+
+/// Cancel any pending tile downloads.
 - (void)cancelConcurrentDownloads;
 
-// Tiled images data source.
-@property (readonly, nonatomic) NSObject <ARTiledImageViewDataSource> *dataSource;
-// Display tiled borders for debugging.
+/// Tiled image data source.
+@property (readonly, nonatomic, weak) NSObject <ARTiledImageViewDataSource> *dataSource;
+
+/// Display tiled borders for debugging.
 @property (readwrite, nonatomic, assign) BOOL displayTileBorders;
-// Current image zoom level.
-@property (readonly, nonatomic) NSInteger currentZoomLevel;
+
+/// Current image zoom level based on the DeepZoom algorithm.
+@property (readonly, nonatomic, assign) NSInteger currentZoomLevel;
 
 
 @end
