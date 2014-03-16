@@ -28,7 +28,7 @@ ds.tileSize = 512;
 // tile format
 ds.tileFormat = @"jpg";
 // location of tiles, organized in subfolders, one per level
-ds.tileBaseURL = [NSURL URLWithString:@"Demo/Tiles/SenoraSabasaGarcia/tiles"];
+ds.tileBaseURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia/tiles"];
 
 ARTiledImageScrollView *v = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
 // set datasource
@@ -36,7 +36,7 @@ v.dataSource = ds;
 // default background color
 v.backgroundColor = [UIColor grayColor];
 // default stretched placeholder image
-v.backgroundImageURL = [NSURL URLWithString:@"Demo/Tiles/SenoraSabasaGarcia/large.jpg"];
+v.backgroundImageURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia/large.jpg"];
 // display tile borders, for debugging
 v.displayTileBorders = NO;
 
