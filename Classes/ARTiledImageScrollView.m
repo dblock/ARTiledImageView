@@ -92,9 +92,16 @@ const CGFloat defaultZoomStep = 1.5f;
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
     self.backgroundImageView.frame = self.tiledImageView.frame;
-    // TODO: Delegate that tile level has changed.
+    if (self.tileZoomLevel != self.tiledImageView.currentZoomLevel) {
+        _tileZoomLevel = self.tiledImageView.currentZoomLevel;
+        [self tileZoomLevelDidChange];
+    }
 }
 
+- (void)tileZoomLevelDidChange
+{
+
+}
 
 - (void)setBackgroundImageURL:(NSURL *)backgroundImageURL
 {

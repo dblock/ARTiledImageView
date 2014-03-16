@@ -10,6 +10,9 @@
 
 @interface ARTiledImageScrollView : UIScrollView <UIScrollViewDelegate>
 
+/// Current tile zoom level.
+@property (nonatomic, readonly, assign) NSInteger tileZoomLevel;
+
 /// Convert a point at full zoom scale to the same one at the current zoom scale.
 - (CGPoint)zoomRelativePoint:(CGPoint)point;
 
@@ -18,6 +21,9 @@
 
 /// Zoom the image to fit the current display.
 - (void)zoomToFit:(BOOL)animate;
+
+/// Callback for when the tile zoom level has changed.
+- (void)tileZoomLevelDidChange;
 
 /// The data source for image.
 @property (readwrite, nonatomic, weak) NSObject <ARTiledImageViewDataSource> *dataSource;

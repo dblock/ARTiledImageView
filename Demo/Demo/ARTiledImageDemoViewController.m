@@ -12,7 +12,6 @@
 #import "ARLocalTiledImageDataSource.h"
 
 @interface ARTiledImageDemoViewController ()
-@property (nonatomic, readonly) ARTiledImageScrollView *scrollView;
 @property (nonatomic, readonly) NSObject<ARTiledImageViewDataSource> *dataSource;
 @end
 
