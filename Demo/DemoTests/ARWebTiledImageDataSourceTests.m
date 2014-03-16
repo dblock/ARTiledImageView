@@ -1,6 +1,6 @@
 //
 //  ARWebTiledImageDataSourceTests.m
-//  ARTiledImage
+//  ARTiledImageView
 //
 //  Created by Daniel Doubrovkine on 3/15/14.
 //  Copyright (c) 2014 Artsy. All rights reserved.
@@ -32,12 +32,12 @@ pending(@"tiledImageView:imageTileForLevel:level:x:y:", ^{
 });
 
 pending(@"didDownloadTiledImage:atURL:", ^{
-    
+
 });
 
 it(@"imageSizeForImageView:", ^{
     expect([ds imageSizeForImageView:nil]).to.equal(CGSizeMake(5000, 5389));
-    
+
 });
 
 it(@"tileSizeForImageView:", ^{

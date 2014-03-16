@@ -1,6 +1,6 @@
 //
-//  ARTiledImageViewController.m
-//  ARTiledImage
+//  ARTiledImageViewViewController.m
+//  ARTiledImageView
 //
 //  Created by Daniel Doubrovkine on 3/10/14.
 //  Copyright (c) 2014 Artsy. All rights reserved.

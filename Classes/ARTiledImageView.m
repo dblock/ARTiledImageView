@@ -1,6 +1,6 @@
 //
-//  ARTiledImageView.m
-//  ARTiledImage
+//  ARTiledImageViewView.m
+//  ARTiledImageView
 //
 //  Created by Orta Therox on 2014/01/29.
 //  Copyright (c) 2014 Artsy. All rights reserved.

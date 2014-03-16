@@ -1,13 +1,12 @@
 //
 //  main.m
-//  Demo
+//  ARTiledImageViewView
 //
-//  Created by Neil Ang on 6/05/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Daniel Doubrovkine on 3/10/14.
+//  Copyright (c) 2014 Artsy. All rights reserved.
 //
 
 #import "ARAppDelegate.h"
-
 
 int main(int argc, char *argv[]) {
     @autoreleasepool {
