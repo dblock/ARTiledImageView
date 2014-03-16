@@ -1,5 +1,5 @@
 PODS:
-  - ARTiledImageView (0.1.0):
+  - ARTiledImageView (1.0.0):
     - SDWebImage
   - Expecta (0.2.4)
   - EXPMatchers+FBSnapshotTest (1.0):
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
     :path: ../ARTiledImageView.podspec
 
 SPEC CHECKSUMS:
-  ARTiledImageView: 923c10ecc9f8df4e6c2fd13aa46a36eb7489c54f
+  ARTiledImageView: 6ab846b8a1b2e208587f9e9369cdd1094554a321
   Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
   EXPMatchers+FBSnapshotTest: 1b9506577e494191565ff51ffd5b1e76339d727b
   FBSnapshotTestCase: 188c80bfcb72e744eb0b99d45989d12687c40cf8
