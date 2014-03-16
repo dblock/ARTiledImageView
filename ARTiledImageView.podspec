@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "Display, pan and deep zoom with tiled images."
   s.description      = "Display, pan and deep zoom with tiled images on iOS."
   s.homepage         = "https://github.com/dblock/ARTiledImageView"
-  s.screenshots      = "https://raw.github.com/dblock/ARTiledImageView/Demo/Screenshots/ArmoryShow.png", "https://raw.github.com/dblock/ARTiledImageView/Demo/Screenshots/goya2.png"
+  s.screenshots      = "https://raw.github.com/dblock/ARTiledImageView/master/Demo/Screenshots/goya1.png", "https://raw.github.com/dblock/ARTiledImageView/master/Demo/Screenshots/goya2.png"
   s.license          = "MIT"
   s.author           = { "dblock" => "dblock@dblock.org", "orta" => "orta.therox@gmail.com" }
   s.source           = { :git => "https://github.com/dblock/ARTiledImage.git", :tag => s.version.to_s }
