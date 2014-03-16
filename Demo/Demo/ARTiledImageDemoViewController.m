@@ -11,18 +11,19 @@
 #import "ARWebTiledImageDataSource.h"
 
 @interface ARTiledImageDemoViewController ()
-@property(nonatomic, readonly) ARTiledImageScrollView *imageScrollView;
+@property (nonatomic, readonly) ARTiledImageScrollView *imageScrollView;
 @end
 
 @implementation ARTiledImageDemoViewController
 
--(void)setDisplayTileBorders:(BOOL)displayTileBorders
+- (void)setDisplayTileBorders:(BOOL)displayTileBorders
 {
     self.imageScrollView.displayTileBorders = displayTileBorders;
     _displayTileBorders = displayTileBorders;
 }
 
--(void)viewDidLoad
+
+- (void)viewDidLoad
 {
     [super viewDidLoad];
 
@@ -34,10 +35,10 @@
     webTileImageDataSource.tileSize = 512;
     webTileImageDataSource.tileFormat = @"jpg";
     webTileImageDataSource.tileBaseURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/tiles", self.tilesURL.absoluteString]];
-    
+
     ARTiledImageScrollView *imageScrollView = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
     imageScrollView.dataSource = webTileImageDataSource;
-    imageScrollView.backgroundColor  = [UIColor grayColor];
+    imageScrollView.backgroundColor = [UIColor grayColor];
     imageScrollView.backgroundImageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/large.jpg", self.tilesURL.absoluteString]];
     imageScrollView.displayTileBorders = self.displayTileBorders;
     _imageScrollView = imageScrollView;
@@ -45,14 +46,22 @@
     [self.view addSubview:imageScrollView];
 }
 
--(void)viewDidAppear:(BOOL)animated
+
+- (void)viewDidAppear:(BOOL)animated
 {
     [self.imageScrollView zoomToFit:animated];
 }
 
--(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+- (BOOL)automaticallyAdjustsScrollViewInsets
+{
+    return NO;
 }
 
 @end

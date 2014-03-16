@@ -11,13 +11,9 @@
 
 @implementation ARMasterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)viewDidLoad
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = @"ARTiledImageView";
-    }
-    return self;
+    self.title = @"ARTiledImageView Demo";
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -32,9 +28,12 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return 3;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -63,8 +62,9 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (indexPath.row == 0) {
         ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
         vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/Armory2014"];
@@ -72,6 +72,7 @@
         vc.minTileLevel = 11;
         vc.maxTileLevel = 13;
         [self.navigationController pushViewController:vc animated:YES];
+
     } else if (indexPath.row == 1) {
         ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
         vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/Armory2014"];
@@ -80,6 +81,7 @@
         vc.maxTileLevel = 13;
         vc.displayTileBorders = YES;
         [self.navigationController pushViewController:vc animated:YES];
+
     } else if (indexPath.row == 2) {
         ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
         // https://artsy.net/artwork/francisco-jose-de-goya-y-lucientes-senora-sabasa-garcia

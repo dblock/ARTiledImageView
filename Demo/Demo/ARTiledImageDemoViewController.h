@@ -6,14 +6,13 @@
 //  Copyright (c) 2014 Artsy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface ARTiledImageDemoViewController : UIViewController
 
-@property(nonatomic, assign) BOOL displayTileBorders;
-@property(nonatomic, readwrite) NSURL *tilesURL;
-@property(nonatomic, readwrite) CGSize tiledSize;
-@property(nonatomic, readwrite) NSInteger minTileLevel;
-@property(nonatomic, readwrite) NSInteger maxTileLevel;
+@property (readwrite, nonatomic, strong) NSURL *tilesURL;
+
+@property (readwrite, nonatomic, assign) BOOL displayTileBorders;
+@property (readwrite, nonatomic, assign) CGSize tiledSize;
+@property (readwrite, nonatomic, assign) NSInteger minTileLevel;
+@property (readwrite, nonatomic, assign) NSInteger maxTileLevel;
 
 @end
