@@ -27,18 +27,18 @@
     [super viewDidLoad];
 
     ARWebTiledImageDataSource *webTileImageDataSource = [[ARWebTiledImageDataSource alloc] init];
-    webTileImageDataSource.maxTiledHeight = 5389;
-    webTileImageDataSource.maxTiledWidth = 5000;
-    webTileImageDataSource.minTileLevel = 11;
-    webTileImageDataSource.maxTileLevel = ceil(log(MAX(webTileImageDataSource.maxTiledWidth, webTileImageDataSource.maxTiledHeight))/log(2));
+    webTileImageDataSource.maxTiledHeight = self.tiledSize.height;
+    webTileImageDataSource.maxTiledWidth = self.tiledSize.width;
+    webTileImageDataSource.minTileLevel = self.minTileLevel;
+    webTileImageDataSource.maxTileLevel = self.maxTileLevel;
     webTileImageDataSource.tileSize = 512;
     webTileImageDataSource.tileFormat = @"jpg";
-    webTileImageDataSource.tileBaseURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/Armory2014/tiles"];
+    webTileImageDataSource.tileBaseURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/tiles", self.tilesURL.absoluteString]];
     
     ARTiledImageScrollView *imageScrollView = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
     imageScrollView.dataSource = webTileImageDataSource;
     imageScrollView.backgroundColor  = [UIColor grayColor];
-    imageScrollView.backgroundImageURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/Armory2014/large.jpg"];
+    imageScrollView.backgroundImageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/large.jpg", self.tilesURL.absoluteString]];
     imageScrollView.displayTileBorders = self.displayTileBorders;
     _imageScrollView = imageScrollView;
 

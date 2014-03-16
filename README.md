@@ -10,14 +10,14 @@ TODO
 
 ## Installation
 
-ARTiledImage is available through [CocoaPods](http://cocoapods.org), to install
+ARTiledImageView is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
     pod "ARTiledImageView"
 
 ## Credits
 
-ARTiledImage is originally written by [@orta](https://github.com/orta), with contributions from [@speednoisemovement](https://github.com/speednoisemovement) and [@dblock](https://github.com/dblock).
+ARTiledImageView is originally written by [@orta](https://github.com/orta), with contributions from [@speednoisemovement](https://github.com/speednoisemovement) and [@dblock](https://github.com/dblock).
 
 ## Copyright & License
 

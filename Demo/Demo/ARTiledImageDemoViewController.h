@@ -11,5 +11,9 @@
 @interface ARTiledImageDemoViewController : UIViewController
 
 @property(nonatomic, assign) BOOL displayTileBorders;
+@property(nonatomic, readwrite) NSURL *tilesURL;
+@property(nonatomic, readwrite) CGSize tiledSize;
+@property(nonatomic, readwrite) NSInteger minTileLevel;
+@property(nonatomic, readwrite) NSInteger maxTileLevel;
 
 @end
