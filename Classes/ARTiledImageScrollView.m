@@ -11,7 +11,7 @@
 #import "ARTiledImageViewDataSource.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-const CGFloat defaultZoomStep = 1.5f;
+const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
 
 @interface ARTiledImageScrollView ()
 @property (nonatomic, readonly) ARTiledImageView *tiledImageView;
@@ -182,7 +182,7 @@ const CGFloat defaultZoomStep = 1.5f;
     } else {
         // The location tapped becomes the new center
         CGPoint tapCenter = [gestureRecognizer locationInView:self.tiledImageView];
-        CGFloat newScale = MIN(self.zoomScale * (self.zoomStep ? : defaultZoomStep), self.maximumZoomScale);
+        CGFloat newScale = MIN(self.zoomScale * (self.zoomStep ? : ARTiledImageScrollViewDefaultZoomStep), self.maximumZoomScale);
         CGRect maxZoomRect = [self rectAroundPoint:tapCenter atZoomScale:newScale];
         [self zoomToRect:maxZoomRect animated:YES];
     }
@@ -208,7 +208,7 @@ const CGFloat defaultZoomStep = 1.5f;
 - (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer
 {
     // Two-finger tap zooms out, but returns to normal zoom level if it reaches min zoom.
-    CGFloat newScale = self.zoomScale <= self.minimumZoomScale ? self.maximumZoomScale : self.zoomScale / (self.zoomStep ? : defaultZoomStep);
+    CGFloat newScale = self.zoomScale <= self.minimumZoomScale ? self.maximumZoomScale : self.zoomScale / (self.zoomStep ? : ARTiledImageScrollViewDefaultZoomStep);
     [self setZoomScale:newScale animated:YES];
 }
 
