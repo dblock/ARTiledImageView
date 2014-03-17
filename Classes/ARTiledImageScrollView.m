@@ -98,10 +98,12 @@ const CGFloat defaultZoomStep = 1.5f;
     }
 }
 
+
 - (void)tileZoomLevelDidChange
 {
 
 }
+
 
 - (void)setBackgroundImageURL:(NSURL *)backgroundImageURL
 {
@@ -110,6 +112,16 @@ const CGFloat defaultZoomStep = 1.5f;
     [backgroundImageView setImageWithURL:backgroundImageURL];
     _backgroundImageView = backgroundImageView;
     _backgroundImageURL = backgroundImageURL;
+}
+
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage
+{
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.tiledImageView.frame];
+    [self insertSubview:backgroundImageView belowSubview:self.tiledImageView];
+    [backgroundImageView setImage:backgroundImage];
+    _backgroundImageView = backgroundImageView;
+    _backgroundImage = backgroundImage;
 }
 
 

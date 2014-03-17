@@ -53,7 +53,11 @@
     ARTiledImageScrollView *sv = [[ARTiledImageScrollView alloc] initWithFrame:self.view.bounds];
     sv.dataSource = self.dataSource;
     sv.backgroundColor = [UIColor grayColor];
-    sv.backgroundImageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/large.jpg", self.tilesURL.absoluteString]];
+    if (self.tilesPath) {
+        sv.backgroundImage = [UIImage imageWithContentsOfFile:[self.tilesPath stringByAppendingPathComponent:@"large.jpg"]];
+    } else {
+        sv.backgroundImageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/large.jpg", self.tilesURL.absoluteString]];
+    }
     sv.displayTileBorders = self.displayTileBorders;
     _scrollView = sv;
 
