@@ -6,7 +6,7 @@ before_install:
   - export LANG=en_US.UTF-8
   - gem i cocoapods --no-ri --no-rdoc
   - pod install
-xcode_workspace: Demo.xcworkspace
+xcode_workspace: ARTiledImageView.xcworkspace
 xcode_scheme: Demo
 xcode_sdk: iphonesimulator
 
