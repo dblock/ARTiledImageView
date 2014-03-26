@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07DDEB3EBEEC4C6FAF715BF1 /* libPods-DemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DB4ADA533041DD9D9E7647 /* libPods-DemoTests.a */; };
+		07DDEB3EBEEC4C6FAF715BF1 /* libPods-IntegrationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DB4ADA533041DD9D9E7647 /* libPods-IntegrationTests.a */; };
 		273E9EE865984F44A8AF2A9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2957D8BD1FB4630AD6F922F /* libPods.a */; };
 		3C7F86CD18CE609200F7091A /* ARTiledImageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F86CC18CE609200F7091A /* ARTiledImageDemoViewController.m */; };
 		3CB0E6D718C8B9E2009CE8DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0E6D618C8B9E2009CE8DB /* Foundation.framework */; };
@@ -53,23 +53,23 @@
 		3CB0E6E218C8B9E2009CE8DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CB0E6E418C8B9E2009CE8DB /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 		3CB0E6EE18C8B9E2009CE8DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3CB0E6F418C8B9E2009CE8DB /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB0E6F418C8B9E2009CE8DB /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB0E6F518C8B9E2009CE8DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3CB0E6FD18C8B9E3009CE8DB /* DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoTests-Info.plist"; sourceTree = "<group>"; };
+		3CB0E6FD18C8B9E3009CE8DB /* IntegrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationTests-Info.plist"; sourceTree = "<group>"; };
 		3CB0E6FF18C8B9E3009CE8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3CB0E70D18C8BB08009CE8DB /* ARAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
 		3CB0E70E18C8BB08009CE8DB /* ARAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
 		3CB0E71718C8BB08009CE8DB /* ARMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMasterViewController.h; sourceTree = "<group>"; };
 		3CB0E71818C8BB08009CE8DB /* ARMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMasterViewController.m; sourceTree = "<group>"; };
 		3CB0E72918C8BC62009CE8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ARMasterViewController.xib; sourceTree = "<group>"; };
-		3CB0E72B18C8BD61009CE8DB /* DemoTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DemoTests-Prefix.pch"; sourceTree = "<group>"; };
+		3CB0E72B18C8BD61009CE8DB /* IntegrationTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IntegrationTests-Prefix.pch"; sourceTree = "<group>"; };
 		3CB8E36318D4DEA40023AB71 /* ARMasterViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMasterViewControllerTests.m; sourceTree = "<group>"; };
 		3CB8E36418D4DEA40023AB71 /* ARTiledImageViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageViewControllerTests.m; sourceTree = "<group>"; };
 		3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARWebTiledImageDataSourceTests.m; sourceTree = "<group>"; };
 		3CB8E5BC18D6239C0023AB71 /* Tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tiles; sourceTree = SOURCE_ROOT; };
 		3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLocalTiledImageDataSourceTests.m; sourceTree = "<group>"; };
-		93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.xcconfig"; path = "Pods/Pods-DemoTests.xcconfig"; sourceTree = "<group>"; };
-		98DB4ADA533041DD9D9E7647 /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B37F17EB6B492D83AB25A2 /* Pods-IntegrationTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationTests.xcconfig"; path = "Pods/Pods-IntegrationTests.xcconfig"; sourceTree = "<group>"; };
+		98DB4ADA533041DD9D9E7647 /* libPods-IntegrationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntegrationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0E280B71AE47E499695C40 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D2957D8BD1FB4630AD6F922F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,7 +93,7 @@
 				3CB0E6F618C8B9E2009CE8DB /* XCTest.framework in Frameworks */,
 				3CB0E6F818C8B9E3009CE8DB /* UIKit.framework in Frameworks */,
 				3CB0E6F718C8B9E2009CE8DB /* Foundation.framework in Frameworks */,
-				07DDEB3EBEEC4C6FAF715BF1 /* libPods-DemoTests.a in Frameworks */,
+				07DDEB3EBEEC4C6FAF715BF1 /* libPods-IntegrationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,11 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				3CB0E6DC18C8B9E2009CE8DB /* Demo */,
-				3CB0E6FB18C8B9E3009CE8DB /* DemoTests */,
+				3CB0E6FB18C8B9E3009CE8DB /* IntegrationTests */,
 				3CB0E6D518C8B9E2009CE8DB /* Frameworks */,
 				3CB0E6D418C8B9E2009CE8DB /* Products */,
 				BD0E280B71AE47E499695C40 /* Pods.xcconfig */,
-				93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */,
+				93B37F17EB6B492D83AB25A2 /* Pods-IntegrationTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3CB0E6D318C8B9E2009CE8DB /* Demo.app */,
-				3CB0E6F418C8B9E2009CE8DB /* DemoTests.xctest */,
+				3CB0E6F418C8B9E2009CE8DB /* IntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,7 +129,7 @@
 				3CB0E6DA18C8B9E2009CE8DB /* UIKit.framework */,
 				3CB0E6F518C8B9E2009CE8DB /* XCTest.framework */,
 				D2957D8BD1FB4630AD6F922F /* libPods.a */,
-				98DB4ADA533041DD9D9E7647 /* libPods-DemoTests.a */,
+				98DB4ADA533041DD9D9E7647 /* libPods-IntegrationTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3CB0E6FB18C8B9E3009CE8DB /* DemoTests */ = {
+		3CB0E6FB18C8B9E3009CE8DB /* IntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
 				3CB8E36318D4DEA40023AB71 /* ARMasterViewControllerTests.m */,
@@ -171,14 +171,14 @@
 				3CB0E6FC18C8B9E3009CE8DB /* Supporting Files */,
 				3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */,
 			);
-			path = DemoTests;
+			path = IntegrationTests;
 			sourceTree = "<group>";
 		};
 		3CB0E6FC18C8B9E3009CE8DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3CB0E72B18C8BD61009CE8DB /* DemoTests-Prefix.pch */,
-				3CB0E6FD18C8B9E3009CE8DB /* DemoTests-Info.plist */,
+				3CB0E72B18C8BD61009CE8DB /* IntegrationTests-Prefix.pch */,
+				3CB0E6FD18C8B9E3009CE8DB /* IntegrationTests-Info.plist */,
 				3CB0E6FE18C8B9E3009CE8DB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -206,9 +206,9 @@
 			productReference = 3CB0E6D318C8B9E2009CE8DB /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3CB0E6F318C8B9E2009CE8DB /* DemoTests */ = {
+		3CB0E6F318C8B9E2009CE8DB /* IntegrationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CB0E70818C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "DemoTests" */;
+			buildConfigurationList = 3CB0E70818C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
 			buildPhases = (
 				BE3A7AB44CD649DE8FEEB154 /* Check Pods Manifest.lock */,
 				3CB0E6F018C8B9E2009CE8DB /* Sources */,
@@ -221,9 +221,9 @@
 			dependencies = (
 				3CB0E6FA18C8B9E3009CE8DB /* PBXTargetDependency */,
 			);
-			name = DemoTests;
-			productName = DemoTests;
-			productReference = 3CB0E6F418C8B9E2009CE8DB /* DemoTests.xctest */;
+			name = IntegrationTests;
+			productName = IntegrationTests;
+			productReference = 3CB0E6F418C8B9E2009CE8DB /* IntegrationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -255,7 +255,7 @@
 			projectRoot = "";
 			targets = (
 				3CB0E6D218C8B9E2009CE8DB /* Demo */,
-				3CB0E6F318C8B9E2009CE8DB /* DemoTests */,
+				3CB0E6F318C8B9E2009CE8DB /* IntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -311,7 +311,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-DemoTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-IntegrationTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE3A7AB44CD649DE8FEEB154 /* Check Pods Manifest.lock */ = {
@@ -515,7 +515,7 @@
 		};
 		3CB0E70918C8B9E3009CE8DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */;
+			baseConfigurationReference = 93B37F17EB6B492D83AB25A2 /* Pods-IntegrationTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -524,13 +524,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DemoTests/DemoTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "IntegrationTests/IntegrationTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"FB_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages\\\"\"",
+					"FB_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/IntegrationTests/ReferenceImages\\\"\"",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DemoTests/DemoTests-Info.plist";
+				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -539,7 +539,7 @@
 		};
 		3CB0E70A18C8B9E3009CE8DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93B37F17EB6B492D83AB25A2 /* Pods-DemoTests.xcconfig */;
+			baseConfigurationReference = 93B37F17EB6B492D83AB25A2 /* Pods-IntegrationTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -548,9 +548,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DemoTests/DemoTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "IntegrationTests/IntegrationTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
-				INFOPLIST_FILE = "DemoTests/DemoTests-Info.plist";
+				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -578,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CB0E70818C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
+		3CB0E70818C8B9E3009CE8DB /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CB0E70918C8B9E3009CE8DB /* Debug */,
