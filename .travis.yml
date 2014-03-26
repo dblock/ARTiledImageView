@@ -1,11 +1,12 @@
 language: objective-c
-before_script:
+before_install:
   - brew update
   - brew uninstall xctool
   - brew install xctool
   - export LANG=en_US.UTF-8
-  - cd Demo ; pod install ; cd ..
-xcode_workspace: Demo/Demo.xcworkspace
+  - gem i cocoapods --no-ri --no-rdoc
+  - pod install
+xcode_workspace: Demo.xcworkspace
 xcode_scheme: Demo
 xcode_sdk: iphonesimulator
 

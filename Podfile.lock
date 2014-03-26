@@ -6,13 +6,13 @@ PODS:
     - Expecta
     - FBSnapshotTestCase
   - FBSnapshotTestCase (1.1)
-  - SDWebImage (3.5.4):
+  - SDWebImage (3.6):
     - SDWebImage/Core
-  - SDWebImage/Core (3.5.4)
+  - SDWebImage/Core (3.6)
   - Specta (0.2.1)
 
 DEPENDENCIES:
-  - ARTiledImageView (from `../ARTiledImageView.podspec`)
+  - ARTiledImageView (from `ARTiledImageView.podspec`)
   - Expecta (~> 0.2.3)
   - EXPMatchers+FBSnapshotTest (~> 1.0)
   - FBSnapshotTestCase (~> 1.1)
@@ -20,14 +20,14 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   ARTiledImageView:
-    :path: ../ARTiledImageView.podspec
+    :path: ARTiledImageView.podspec
 
 SPEC CHECKSUMS:
   ARTiledImageView: 6ab846b8a1b2e208587f9e9369cdd1094554a321
   Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
   EXPMatchers+FBSnapshotTest: 1b9506577e494191565ff51ffd5b1e76339d727b
   FBSnapshotTestCase: 188c80bfcb72e744eb0b99d45989d12687c40cf8
-  SDWebImage: 1a62010700adbba823b621fc217906739dbf6aa5
+  SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
   Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
 COCOAPODS: 0.29.0

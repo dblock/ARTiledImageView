@@ -1,4 +1,4 @@
-pod "ARTiledImageView", :path => "../ARTiledImageView.podspec"
+pod "ARTiledImageView", :path => "ARTiledImageView.podspec"
 
 target "DemoTests" do
   pod 'Specta', '~> 0.2.1'

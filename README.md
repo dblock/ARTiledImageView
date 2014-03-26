@@ -6,7 +6,7 @@
 
 ## Demo
 
-![animated](Demo/Screenshots/goya3.gif)
+![animated](Screenshots/goya3.gif)
 
 [Francisco De Goya Y Lucientes, Señora Sabasa Garcia, ca. 1806/1811](https://artsy.net/artwork/francisco-jose-de-goya-y-lucientes-senora-sabasa-garcia), courtesy of the National Gallery of Art, Washington D.C., via [Artsy](https://artsy.net).
 
