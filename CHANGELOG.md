@@ -1,6 +1,7 @@
 ## Next
 
 * Added `ARTiledImageScrollView.backgroundImage` - [@dblock](https://github.com/dblock).
+* Exposed `ARTile`, drawing now goes through `ARTile#drawInRect` - [@dblock](https://github.com/dblock).
 
 ## 1.0.0 (3/15/2013)
 

@@ -72,7 +72,7 @@
 {
     if (indexPath.row == 0) {
         ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
-        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/Armory2014"];
+        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Tiles/Armory2014"];
         vc.tiledSize = CGSizeMake(5000, 5389);
         vc.minTileLevel = 11;
         vc.maxTileLevel = 13;
@@ -80,7 +80,7 @@
 
     } else if (indexPath.row == 1) {
         ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
-        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/Armory2014"];
+        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Tiles/Armory2014"];
         vc.tiledSize = CGSizeMake(5000, 5389);
         vc.minTileLevel = 11;
         vc.maxTileLevel = 13;
@@ -97,7 +97,7 @@
         
     } else if (indexPath.row == 3) {
         ARTiledImageDemoViewController *vc = [[ARTiledImageDemoViewController alloc] init];
-        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia"];
+        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Tiles/SenoraSabasaGarcia"];
         vc.tiledSize = CGSizeMake(2383, 2933);
         vc.minTileLevel = 11;
         vc.maxTileLevel = 12;

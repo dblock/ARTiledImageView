@@ -7,29 +7,9 @@
 //
 
 #import "ARTiledImageView.h"
+#import "ARTile.h"
 #import <QuartzCore/CATiledLayer.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-
-// An internal object corresponding an image with a rect for drawing to.
-
-@interface ARTile : NSObject
-@property (nonatomic, assign) CGRect tileRect;
-@property (nonatomic, strong) UIImage *tileImage;
-@end
-
-@implementation ARTile : NSObject
-
-- (instancetype)initWithImage:(UIImage *)anImage rect:(CGRect)rect
-{
-    self = [super init];
-    if (self == nil) return nil;
-
-    _tileImage = anImage;
-    _tileRect = rect;
-
-    return self;
-}
-@end
 
 // ARTiledImageView responds to rectangle repaint, figures out which tile
 // to download from that rectangle and downloads tiles asynchronously.
@@ -136,7 +116,7 @@
                     [requestURLs setValue:tileURL forKey:tileCacheKey];
                 }
             } else {
-                [tile.tileImage drawInRect:tile.tileRect blendMode:kCGBlendModeNormal alpha:1];
+                [tile drawInRect:tile.tileRect blendMode:kCGBlendModeNormal alpha:1];
                 if (self.displayTileBorders) {
                     [[UIColor greenColor] set];
                     CGContextSetLineWidth(context, 6.0);

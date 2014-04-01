@@ -22,7 +22,7 @@ describe(@"remote", ^{
         vc = [[ARTiledImageDemoViewController alloc] init];
         // https://artsy.net/artwork/francisco-jose-de-goya-y-lucientes-senora-sabasa-garcia
         // (Courtesy National Gallery of Art, Washington)
-        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Demo/Tiles/SenoraSabasaGarcia"];
+        vc.tilesURL = [NSURL URLWithString:@"https://raw.github.com/dblock/ARTiledImageView/master/Tiles/SenoraSabasaGarcia"];
         vc.tiledSize = CGSizeMake(2383, 2933);
         vc.minTileLevel = 11;
         vc.maxTileLevel = 12;
