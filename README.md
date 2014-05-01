@@ -1,8 +1,8 @@
 # ARTiledImageView
 
 [![Build Status](https://travis-ci.org/dblock/ARTiledImageView.png?branch=master)](https://travis-ci.org/dblock/ARTiledImageView)
-[![Version](http://cocoapod-badges.herokuapp.com/v/ARTiledImageView/badge.png)](http://cocoadocs.org/docsets/ARTiledImage)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/ARTiledImageView/badge.png)](http://cocoadocs.org/docsets/ARTiledImage)
+[![Version](http://cocoapod-badges.herokuapp.com/v/ARTiledImageView/badge.png)](http://cocoadocs.org/docsets/ARTiledImageView)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/ARTiledImageView/badge.png)](http://cocoadocs.org/docsets/ARTiledImageView)
 
 ## Demo
 
