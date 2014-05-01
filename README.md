@@ -65,7 +65,7 @@ Try it out with CocoaPods also,
 
 ## Credits
 
-ARTiledImageView was originally written by [@orta](https://github.com/orta), with contributions from [@speednoisemovement](https://github.com/speednoisemovement) and [@dblock](https://github.com/dblock). Some of the implementation in [ARTiledImageScrollView](Classes/ARTiledImageScrollView.m) comes from [NAMapKit](https://github.com/neilang/NAMapKit)
+ARTiledImageView was originally written by [@orta](https://github.com/orta), with contributions from [@speednoisemovement](https://github.com/speednoisemovement) and [@dblock](https://github.com/dblock). Some of the implementation in [ARTiledImageScrollView](Classes/ARTiledImageScrollView.m) comes from [NAMapKit](https://github.com/neilang/NAMapKit).
 
 ## Copyright & License
 
