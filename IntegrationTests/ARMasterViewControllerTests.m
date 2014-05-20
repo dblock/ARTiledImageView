@@ -10,10 +10,6 @@
 
 SpecBegin(ARMasterViewController)
 
-beforeAll(^{
-    setGlobalReferenceImageDir(FB_REFERENCE_IMAGE_DIR);
-});
-
 pending(@"displays the master menu", ^{
     ARMasterViewController *vc = [[ARMasterViewController alloc] initWithNibName:@"ARMasterViewController" bundle:nil];
     expect(vc.view).willNot.beNil();

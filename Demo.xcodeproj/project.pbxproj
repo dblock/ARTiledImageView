@@ -29,6 +29,12 @@
 		3CB8E5BD18D6239C0023AB71 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8E5BC18D6239C0023AB71 /* Tiles */; };
 		3CB8E5BE18D623AE0023AB71 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8E5BC18D6239C0023AB71 /* Tiles */; };
 		3CB8E5C118D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */; };
+		3CBB03AF192BD83800689F89 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03A9192BD83800689F89 /* CHANGELOG.md */; };
+		3CBB03B0192BD83800689F89 /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AA192BD83800689F89 /* CONTRIBUTING.md */; };
+		3CBB03B1192BD83800689F89 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AB192BD83800689F89 /* Gemfile */; };
+		3CBB03B2192BD83800689F89 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AC192BD83800689F89 /* LICENSE */; };
+		3CBB03B3192BD83800689F89 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AD192BD83800689F89 /* Podfile */; };
+		3CBB03B4192BD83800689F89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AE192BD83800689F89 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,12 @@
 		3CB8E36518D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARWebTiledImageDataSourceTests.m; sourceTree = "<group>"; };
 		3CB8E5BC18D6239C0023AB71 /* Tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tiles; sourceTree = SOURCE_ROOT; };
 		3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLocalTiledImageDataSourceTests.m; sourceTree = "<group>"; };
+		3CBB03A9192BD83800689F89 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		3CBB03AA192BD83800689F89 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		3CBB03AB192BD83800689F89 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		3CBB03AC192BD83800689F89 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3CBB03AD192BD83800689F89 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3CBB03AE192BD83800689F89 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		93B37F17EB6B492D83AB25A2 /* Pods-IntegrationTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationTests.xcconfig"; path = "Pods/Pods-IntegrationTests.xcconfig"; sourceTree = "<group>"; };
 		98DB4ADA533041DD9D9E7647 /* libPods-IntegrationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntegrationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0E280B71AE47E499695C40 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -109,6 +121,12 @@
 				3CB0E6D418C8B9E2009CE8DB /* Products */,
 				BD0E280B71AE47E499695C40 /* Pods.xcconfig */,
 				93B37F17EB6B492D83AB25A2 /* Pods-IntegrationTests.xcconfig */,
+				3CBB03A9192BD83800689F89 /* CHANGELOG.md */,
+				3CBB03AA192BD83800689F89 /* CONTRIBUTING.md */,
+				3CBB03AB192BD83800689F89 /* Gemfile */,
+				3CBB03AC192BD83800689F89 /* LICENSE */,
+				3CBB03AD192BD83800689F89 /* Podfile */,
+				3CBB03AE192BD83800689F89 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,8 +284,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB0E6EF18C8B9E2009CE8DB /* Images.xcassets in Resources */,
+				3CBB03AF192BD83800689F89 /* CHANGELOG.md in Resources */,
+				3CBB03B4192BD83800689F89 /* README.md in Resources */,
+				3CBB03B2192BD83800689F89 /* LICENSE in Resources */,
+				3CBB03B0192BD83800689F89 /* CONTRIBUTING.md in Resources */,
 				3CB0E6E118C8B9E2009CE8DB /* InfoPlist.strings in Resources */,
 				3CB8E5BD18D6239C0023AB71 /* Tiles in Resources */,
+				3CBB03B3192BD83800689F89 /* Podfile in Resources */,
+				3CBB03B1192BD83800689F89 /* Gemfile in Resources */,
 				3CB0E72A18C8BC62009CE8DB /* ARMasterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

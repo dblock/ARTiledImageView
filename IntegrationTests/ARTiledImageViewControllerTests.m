@@ -10,10 +10,6 @@
 
 SpecBegin(ARTiledImageDemoViewController)
 
-beforeAll(^{
-    setGlobalReferenceImageDir(FB_REFERENCE_IMAGE_DIR);
-});
-
 __block ARTiledImageDemoViewController *vc = nil;
 
 describe(@"remote", ^{
