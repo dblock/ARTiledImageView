@@ -151,8 +151,11 @@
 
     for (NSString *tileCacheKey in urls.keyEnumerator) {
         NSURL *tileURL = [urls objectForKey:tileCacheKey];
-        if ([self.downloadOperations objectForKey:tileCacheKey]) {
-            continue;
+        
+        @synchronized (self.downloadOperations) {
+            if ([self.downloadOperations objectForKey:tileCacheKey]) {
+                continue;
+            }
         }
 
         id <SDWebImageOperation> operation = nil;
