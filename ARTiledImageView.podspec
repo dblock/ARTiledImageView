@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ARTiledImageView"
-  s.version          = "1.1.0"
+  s.version          = "1.1.1"
   s.summary          = "Display, pan and deep zoom with tiled images."
   s.description      = "Display, pan and deep zoom with tiled images on iOS."
   s.homepage         = "https://github.com/dblock/ARTiledImageView"
