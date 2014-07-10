@@ -1,3 +1,9 @@
+## 1.2 (10/06/2014)
+
+* [#5](https://github.com/dblock/ARTiledImageView/issues/5): Improved centering behavior when zooming out - [@orta](https://github.com/orta).
+* [#5](https://github.com/dblock/ARTiledImageView/issues/5): Fix to zoom animations behavior with a backing image view - [@orta](https://github.com/orta).
+* [#5](https://github.com/dblock/ARTiledImageView/issues/5): Expose the double tap gesture on ARTiledImageScrollView - [@orta](https://github.com/orta).
+
 ## 1.1.1 (5/29/2014)
 
 * [#2](https://github.com/dblock/ARTiledImageView/issues/2): Fixed crash in `[ARTiledImageView downloadAndRedrawTilesWithURLs:]`, (ARTiledImageView.m:154) - [@dblock](https://github.com/dblock).
