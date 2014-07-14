@@ -46,4 +46,10 @@
 /// Amount by which to zoom in or zoom out with every double-tap, default is 1.5f.
 @property (nonatomic, assign) CGFloat zoomStep;
 
+/// During a pinch zoom, default is YES.
+@property (nonatomic, assign) BOOL centerOnZoomOut;
+
+/// Exposed double tap gesture for zooming.
+@property (nonatomic, strong, readonly) UITapGestureRecognizer *doubleTapGesture;
+
 @end

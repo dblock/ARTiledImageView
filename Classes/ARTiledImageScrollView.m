@@ -8,14 +8,14 @@
 
 #import "ARTiledImageScrollView.h"
 #import "ARTiledImageView.h"
+#import "ARImageBackedTiledView.h"
 #import "ARTiledImageViewDataSource.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
+const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
 
 @interface ARTiledImageScrollView ()
-@property (nonatomic, readonly) ARTiledImageView *tiledImageView;
-@property (nonatomic, readonly) UIImageView *backgroundImageView;
+@property (nonatomic, weak, readonly) ARImageBackedTiledView *imageBackedTiledImageView;
 @end
 
 @implementation ARTiledImageScrollView
@@ -29,18 +29,22 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
 
 - (void)setup
 {
-    _tiledImageView = [[ARTiledImageView alloc] initWithDataSource:self.dataSource];
-    [self addSubview:self.tiledImageView];
+    ARTiledImageView *tiledImageView = [[ARTiledImageView alloc] initWithDataSource:self.dataSource];
+
+    ARImageBackedTiledView *imageBackedTileView = [[ARImageBackedTiledView alloc] initWithTiledImageView:tiledImageView];
+    [self addSubview:imageBackedTileView];
+    _imageBackedTiledImageView = imageBackedTileView;
 
     [self setMaxMinZoomScalesForCurrentBounds];
 
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
     self.delegate = self;
+    self.centerOnZoomOut = YES;
 
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
     [doubleTap setNumberOfTapsRequired:2];
     [self addGestureRecognizer:doubleTap];
+    _doubleTapGesture = doubleTap;
 
     UITapGestureRecognizer *twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerTap:)];
     [twoFingerTap setNumberOfTouchesRequired:2];
@@ -91,7 +95,6 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
-    self.backgroundImageView.frame = self.tiledImageView.frame;
     if (self.tileZoomLevel != self.tiledImageView.currentZoomLevel) {
         _tileZoomLevel = self.tiledImageView.currentZoomLevel;
         [self tileZoomLevelDidChange];
@@ -107,20 +110,14 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
 
 - (void)setBackgroundImageURL:(NSURL *)backgroundImageURL
 {
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.tiledImageView.frame];
-    [self insertSubview:backgroundImageView belowSubview:self.tiledImageView];
-    [backgroundImageView setImageWithURL:backgroundImageURL];
-    _backgroundImageView = backgroundImageView;
+    [self.backgroundImageView setImageWithURL:backgroundImageURL];
     _backgroundImageURL = backgroundImageURL;
 }
 
 
 - (void)setBackgroundImage:(UIImage *)backgroundImage
 {
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.tiledImageView.frame];
-    [self insertSubview:backgroundImageView belowSubview:self.tiledImageView];
-    [backgroundImageView setImage:backgroundImage];
-    _backgroundImageView = backgroundImageView;
+    [self.backgroundImageView setImage:backgroundImage];
     _backgroundImage = backgroundImage;
 }
 
@@ -150,6 +147,8 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
 }
 
 
+#pragma mark - Orientation
+
 - (void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
@@ -159,11 +158,39 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
     }
 }
 
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+
+    if (!self.centerOnZoomOut) { return; }
+
+    CGSize boundsSize = self.bounds.size;
+    CGRect imageFrame = self.imageBackedTiledImageView.frame;
+
+    // Center horizontally
+    if (imageFrame.size.width < boundsSize.width) {
+        imageFrame.origin.x = (boundsSize.width - imageFrame.size.width) / 2;
+    } else {
+        imageFrame.origin.x = 0;
+    }
+
+    // Center vertically
+    if (imageFrame.size.height < boundsSize.height) {
+        imageFrame.origin.y = (boundsSize.height - imageFrame.size.height) / 2;
+    } else {
+        imageFrame.origin.y = 0;
+    }
+
+    self.imageBackedTiledImageView.frame = imageFrame;
+}
+
+
 #pragma mark - UIScrollViewDelegate
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-    return self.tiledImageView;
+    return self.imageBackedTiledImageView;
 }
 
 
@@ -171,6 +198,7 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
 {
     return self.zoomScale / self.maximumZoomScale;
 }
+
 
 #pragma mark - Tap to Zoom
 
@@ -211,5 +239,18 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5f;
     CGFloat newScale = self.zoomScale <= self.minimumZoomScale ? self.maximumZoomScale : self.zoomScale / (self.zoomStep ? : ARTiledImageScrollViewDefaultZoomStep);
     [self setZoomScale:newScale animated:YES];
 }
+
+
+- (ARTiledImageView *)tiledImageView
+{
+    return self.imageBackedTiledImageView.tiledImageView;
+}
+
+
+- (UIImageView *)backgroundImageView
+{
+    return self.imageBackedTiledImageView.imageView;
+}
+
 
 @end
