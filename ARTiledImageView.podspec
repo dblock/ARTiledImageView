@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ARTiledImageView"
-  s.version          = "1.2.0"
+  s.version          = "1.2"
   s.summary          = "Display, pan and deep zoom with tiled images."
   s.description      = "Display, pan and deep zoom with tiled images on iOS."
   s.homepage         = "https://github.com/dblock/ARTiledImageView"
@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.source_files     = 'Classes'
   s.frameworks       = 'Foundation', 'UIKit', 'CoreGraphics'
-  s.dependencies     = ['SDWebImage']
+  s.dependencies     = ['SDWebImage/Core']
 end
