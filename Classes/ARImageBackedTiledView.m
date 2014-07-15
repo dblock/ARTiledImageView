@@ -1,6 +1,6 @@
 //
 //  ARImageBackedTiledView.h
-//  Artsy Folio
+//  ARTiledImageView
 //
 //  Created by Orta on 10/07/2014.
 //  Copyright (c) 2014 http://artsy.net. All rights reserved.

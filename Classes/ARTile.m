@@ -26,5 +26,11 @@
     [self.tileImage drawInRect:rect blendMode:blendMode alpha:alpha];
 }
 
+- (id)debugQuickLookObject 
+{
+    return self.tileImage;
+}
+
+
 @end
 
