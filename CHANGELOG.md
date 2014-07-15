@@ -1,8 +1,9 @@
-## 1.2.0 (10/06/2014)
+## 1.2.0 (15/07/2014)
 
 * [#5](https://github.com/dblock/ARTiledImageView/issues/5): Improved centering behavior when zooming out - [@orta](https://github.com/orta).
 * [#5](https://github.com/dblock/ARTiledImageView/issues/5): Fix to zoom animations behavior with a backing image view - [@orta](https://github.com/orta).
 * [#5](https://github.com/dblock/ARTiledImageView/issues/5): Expose the double tap gesture on ARTiledImageScrollView - [@orta](https://github.com/orta).
+* [#7](https://github.com/dblock/ARTiledImageView/issues/7): Make setMaxMinZoomScalesForCurrentBounds work based on contentMode - [@orta](https://github.com/orta).
 
 ## 1.1.1 (5/29/2014)
 

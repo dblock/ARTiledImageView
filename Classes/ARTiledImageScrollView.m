@@ -69,7 +69,13 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
     // Calculate min/max zoomscale.
     CGFloat xScale = boundsSize.width / imageSize.width; // the scale needed to perfectly fit the image width-wise
     CGFloat yScale = boundsSize.height / imageSize.height; // the scale needed to perfectly fit the image height-wise
-    CGFloat minScale = MAX(xScale, yScale); // use minimum of these to allow the image to become fully visible
+
+    CGFloat minScale = 0;
+    if (self.contentMode == UIViewContentModeScaleAspectFit) {
+        minScale = MIN(xScale, yScale);
+    } else {
+        minScale = MAX(xScale, yScale);
+    }
 
     CGFloat maxScale = 1.0;
 
