@@ -1,3 +1,7 @@
+## 1.2.1 (13/08/2014)
+
+* Added initializer to `ARTiledImageView` to specify a minimum size for the image - [@ashfurrow](http://github.com/AshFurrow).
+
 ## 1.2.0 (15/07/2014)
 
 * [#5](https://github.com/dblock/ARTiledImageView/issues/5): Improved centering behavior when zooming out - [@orta](https://github.com/orta).

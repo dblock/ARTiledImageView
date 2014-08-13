@@ -19,6 +19,8 @@
 
 /// Initialize with a data source.
 - (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource;
+/// Initialize with a data source and size.
+- (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource minimumSize:(CGSize)size;
 
 /// Cancel any pending tile downloads.
 - (void)cancelConcurrentDownloads;
