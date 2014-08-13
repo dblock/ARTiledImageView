@@ -23,7 +23,12 @@
 
 @implementation ARTiledImageView
 
-- (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource;
+- (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource
+{
+    return [self initWithDataSource:dataSource minimumSize:CGSizeZero];
+}
+
+- (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource minimumSize:(CGSize)minimumSize
 {
     self = [super init];
     if (!self) return nil;
@@ -40,8 +45,11 @@
 
     self.maxLevelOfDetail = max;
 
-    CGSize imagesize = [dataSource imageSizeForImageView:self];
-    self.frame = CGRectMake(0, 0, imagesize.width, imagesize.height);
+    CGSize imageSize = [dataSource imageSizeForImageView:self];
+    // It's possible the image will be smaller than our minimum size.
+    imageSize.width = MAX(imageSize.width, minimumSize.width);
+    imageSize.height = MAX(imageSize.height, minimumSize.height);
+    self.frame = CGRectMake(0, 0, imageSize.width, imageSize.height);
 
     _tileCache = [[NSCache alloc] init];
     _downloadOperations = [[NSMutableDictionary alloc] init];
