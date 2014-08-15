@@ -35,6 +35,7 @@
 		3CBB03B2192BD83800689F89 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AC192BD83800689F89 /* LICENSE */; };
 		3CBB03B3192BD83800689F89 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AD192BD83800689F89 /* Podfile */; };
 		3CBB03B4192BD83800689F89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB03AE192BD83800689F89 /* README.md */; };
+		5EA9D66C199CBFF5008CF9C7 /* ARTiledImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D66B199CBFF5008CF9C7 /* ARTiledImageViewTests.m */; };
 		60893D66196EDFD3009C23E8 /* ARTiledImageScrollViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893D65196EDFD3009C23E8 /* ARTiledImageScrollViewSpec.m */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		3CBB03AC192BD83800689F89 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3CBB03AD192BD83800689F89 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3CBB03AE192BD83800689F89 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5EA9D66B199CBFF5008CF9C7 /* ARTiledImageViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageViewTests.m; sourceTree = "<group>"; };
 		60893D64196EABB0009C23E8 /* ARTiledImageView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ARTiledImageView.podspec; sourceTree = "<group>"; };
 		60893D65196EDFD3009C23E8 /* ARTiledImageScrollViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageScrollViewSpec.m; sourceTree = "<group>"; };
 		93B37F17EB6B492D83AB25A2 /* Pods-IntegrationTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationTests.xcconfig"; path = "Pods/Pods-IntegrationTests.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				3CB0E6FC18C8B9E3009CE8DB /* Supporting Files */,
 				3CB8E5C018D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m */,
 				60893D65196EDFD3009C23E8 /* ARTiledImageScrollViewSpec.m */,
+				5EA9D66B199CBFF5008CF9C7 /* ARTiledImageViewTests.m */,
 			);
 			path = IntegrationTests;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				3CB8E5C118D629C00023AB71 /* ARLocalTiledImageDataSourceTests.m in Sources */,
 				60893D66196EDFD3009C23E8 /* ARTiledImageScrollViewSpec.m in Sources */,
 				3CB8E36618D4DEA40023AB71 /* ARMasterViewControllerTests.m in Sources */,
+				5EA9D66C199CBFF5008CF9C7 /* ARTiledImageViewTests.m in Sources */,
 				3CB8E36818D4DEA40023AB71 /* ARWebTiledImageDataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
