@@ -123,6 +123,7 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
     if (!CGPointEqualToPoint(self.centerPoint, CGPointZero) && !zoomedOut) {
         [self centerOnPoint:self.centerPoint animated:NO];
     }
+    [self centerContent];
 }
 
 
@@ -178,12 +179,6 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
         top = (self.bounds.size.height-self.contentSize.height) * 0.5f;
     }
     self.contentInset = UIEdgeInsetsMake(top, left, top, left);
-}
-
-
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
-    [self centerContent];
 }
 
 
