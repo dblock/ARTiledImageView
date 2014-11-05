@@ -1,6 +1,11 @@
+## 1.2.2 (05/11/2014)
+
+* Use code from PSTCenteredScrollView for centering when scrolling out - (@orta)[http://github.com/orta]
+
 ## 1.2.1 (13/08/2014)
 
 * Added initializer to `ARTiledImageView` to specify a minimum size for the image - [@ashfurrow](http://github.com/AshFurrow).
+
 
 ## 1.2.0 (15/07/2014)
 

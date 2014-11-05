@@ -105,12 +105,24 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
         _tileZoomLevel = self.tiledImageView.currentZoomLevel;
         [self tileZoomLevelDidChange];
     }
+
+    [self centerContent];
 }
 
 
 - (void)tileZoomLevelDidChange
 {
 
+}
+
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    BOOL zoomedOut = self.zoomScale == self.minimumZoomScale;
+    if (!CGPointEqualToPoint(self.centerPoint, CGPointZero) && !zoomedOut) {
+        [self centerOnPoint:self.centerPoint animated:NO];
+    }
 }
 
 
@@ -155,40 +167,23 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
 
 #pragma mark - Orientation
 
-- (void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-    BOOL zoomedOut = self.zoomScale == self.minimumZoomScale;
-    if (!CGPointEqualToPoint(self.centerPoint, CGPointZero) && !zoomedOut) {
-        [self centerOnPoint:self.centerPoint animated:NO];
+- (void)centerContent {
+    if (!self.centerOnZoomOut) { return; }
+
+    CGFloat top = 0, left = 0;
+    if (self.contentSize.width < self.bounds.size.width) {
+        left = (self.bounds.size.width-self.contentSize.width) * 0.5f;
     }
+    if (self.contentSize.height < self.bounds.size.height) {
+        top = (self.bounds.size.height-self.contentSize.height) * 0.5f;
+    }
+    self.contentInset = UIEdgeInsetsMake(top, left, top, left);
 }
 
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-
-    if (!self.centerOnZoomOut) { return; }
-
-    CGSize boundsSize = self.bounds.size;
-    CGRect imageFrame = self.imageBackedTiledImageView.frame;
-
-    // Center horizontally
-    if (imageFrame.size.width < boundsSize.width) {
-        imageFrame.origin.x = (boundsSize.width - imageFrame.size.width) / 2;
-    } else {
-        imageFrame.origin.x = 0;
-    }
-
-    // Center vertically
-    if (imageFrame.size.height < boundsSize.height) {
-        imageFrame.origin.y = (boundsSize.height - imageFrame.size.height) / 2;
-    } else {
-        imageFrame.origin.y = 0;
-    }
-
-    self.imageBackedTiledImageView.frame = imageFrame;
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self centerContent];
 }
 
 
