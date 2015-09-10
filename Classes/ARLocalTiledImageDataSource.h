@@ -30,5 +30,7 @@
 @property (nonatomic) NSInteger maxTileLevel;
 /// Minimum tile level.
 @property (nonatomic) NSInteger minTileLevel;
+/// Extral visual level
+@property (nonatomic) NSInteger extralVisualLevel;
 
 @end
