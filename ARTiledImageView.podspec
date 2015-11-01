@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.source_files     = 'Classes'
   s.frameworks       = 'Foundation', 'UIKit', 'CoreGraphics'
-  s.dependencies     = ['SDWebImage/Core']
+  s.dependency         'SDWebImage/Core'
 end
