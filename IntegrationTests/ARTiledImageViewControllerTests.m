@@ -27,12 +27,14 @@ describe(@"remote", ^{
         [window makeKeyAndVisible];
     });
     
-    it(@"displays map", ^AsyncBlock {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
-            [NSThread sleepForTimeInterval:3.0];
-            expect(vc.view).to.haveValidSnapshotNamed(@"remote");
-            expect(vc.scrollView.tileZoomLevel).to.equal(11);
-            done();
+    it(@"displays map", ^{
+        waitUntil(^(DoneCallback done) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
+                [NSThread sleepForTimeInterval:3.0];
+                expect(vc.view).to.haveValidSnapshotNamed(@"remote");
+                // expect(vc.scrollView.tileZoomLevel).to.equal(11);
+                done();
+            });
         });
     });
 });
@@ -50,11 +52,13 @@ describe(@"local", ^{
         [window makeKeyAndVisible];
     });
     
-    it(@"displays map", ^AsyncBlock {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
-            [NSThread sleepForTimeInterval:2.0];
-            expect(vc.view).to.haveValidSnapshotNamed(@"local");
-            done();
+    it(@"displays map", ^{
+        waitUntil(^(DoneCallback done) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
+                [NSThread sleepForTimeInterval:2.0];
+                expect(vc.view).to.haveValidSnapshotNamed(@"local");
+                done();
+            });
         });
     });
 });

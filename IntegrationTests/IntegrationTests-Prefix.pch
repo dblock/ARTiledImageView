@@ -20,6 +20,6 @@
 #define EXP_SHORTHAND
 #include <Specta/Specta.h>
 #include <Expecta/Expecta.h>
-#include <EXPMatchers+FBSnapshotTest/EXPMatchers+FBSnapshotTest.h>
+#include <Expecta_Snapshots/EXPMatchers+FBSnapshotTest.h>
 
 #endif

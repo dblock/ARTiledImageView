@@ -29,26 +29,30 @@ beforeEach(^{
 
 describe(@"centered zooming", ^{
 
-    it(@"centers by default", ^AsyncBlock {
-        [vc.scrollView setMinimumZoomScale:0.01];
-        [vc.scrollView setZoomScale:0.2 animated:NO];
+    it(@"centers by default", ^{
+        waitUntil(^(DoneCallback done) {
+            [vc.scrollView setMinimumZoomScale:0.01];
+            [vc.scrollView setZoomScale:0.2 animated:NO];
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
-            [NSThread sleepForTimeInterval:2.0];
-            expect(vc.view).to.recordSnapshotNamed(@"centered-zooming-displays-map");
-            done();
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
+                [NSThread sleepForTimeInterval:2.0];
+                expect(vc.view).to.haveValidSnapshotNamed(@"centered-zooming-displays-map");
+                done();
+            });
         });
     });
 
-    it(@"centers by to the top if needed", ^AsyncBlock {
-        [vc.scrollView setMinimumZoomScale:0.01];
-        [vc.scrollView setCenterOnZoomOut:NO];
-        [vc.scrollView setZoomScale:0.2 animated:NO];
+    it(@"centers by to the top if needed", ^{
+        waitUntil(^(DoneCallback done) {
+            [vc.scrollView setMinimumZoomScale:0.01];
+            [vc.scrollView setCenterOnZoomOut:NO];
+            [vc.scrollView setZoomScale:0.2 animated:NO];
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
-            [NSThread sleepForTimeInterval:2.0];
-            expect(vc.view).to.recordSnapshotNamed(@"top-aligned-zooming-displays-map");
-            done();
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
+                [NSThread sleepForTimeInterval:2.0];
+                expect(vc.view).to.haveValidSnapshotNamed(@"top-aligned-zooming-displays-map");
+                done();
+            });
         });
     });
 
@@ -56,25 +60,29 @@ describe(@"centered zooming", ^{
 
 describe(@"fits", ^{
 
-    it(@"fills vertically by default", ^AsyncBlock {
-        [vc.scrollView zoomToFit:NO];
+    it(@"fills vertically by default", ^{
+        waitUntil(^(DoneCallback done) {
+            [vc.scrollView zoomToFit:NO];
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
-            [NSThread sleepForTimeInterval:2.0];
-            expect(vc.view).to.recordSnapshotNamed(@"fills vertically by default");
-            done();
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
+                [NSThread sleepForTimeInterval:2.0];
+                expect(vc.view).to.haveValidSnapshotNamed(@"fills vertically by default");
+                done();
+            });
         });
     });
 
-    it(@"fills horizontally if set to UIViewContentModeScaleAspectFit", ^AsyncBlock {
-        vc.scrollView.contentMode = UIViewContentModeScaleAspectFit;
-        [vc.scrollView setMaxMinZoomScalesForCurrentBounds];
-        [vc.scrollView zoomToFit:NO];
+    it(@"fills horizontally if set to UIViewContentModeScaleAspectFit", ^{
+        waitUntil(^(DoneCallback done) {
+            vc.scrollView.contentMode = UIViewContentModeScaleAspectFit;
+            [vc.scrollView setMaxMinZoomScalesForCurrentBounds];
+            [vc.scrollView zoomToFit:NO];
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
-            [NSThread sleepForTimeInterval:2.0];
-            expect(vc.view).to.recordSnapshotNamed(@"fills horizontally by default changing contentMode");
-            done();
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, (unsigned long) NULL), ^(void) {
+                [NSThread sleepForTimeInterval:2.0];
+                expect(vc.view).to.haveValidSnapshotNamed(@"fills horizontally by default changing contentMode");
+                done();
+            });
         });
     });
     
