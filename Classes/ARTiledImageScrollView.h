@@ -7,6 +7,7 @@
 //
 
 #import "ARTiledImageViewDataSource.h"
+#import "ARImageBackedTiledView.h"
 
 @interface ARTiledImageScrollView : UIScrollView <UIScrollViewDelegate>
 
@@ -51,8 +52,12 @@
 
 /// Exposed double tap gesture for zooming.
 @property (nonatomic, strong, readonly) UITapGestureRecognizer *doubleTapGesture;
+@property (readwrite, nonatomic, strong) UITapGestureRecognizer *twoFingerTapGesture;
+
+@property (nonatomic, weak, readonly) ARImageBackedTiledView *imageBackedTiledImageView;
 
 /// Automatically sets the zoom min & max for current bounds.
 - (void)setMaxMinZoomScalesForCurrentBounds;
+- (void)setMaxMinZoomScalesForBounds:(CGRect)bounds;
 
 @end

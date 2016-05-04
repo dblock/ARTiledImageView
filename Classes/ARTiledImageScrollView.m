@@ -8,15 +8,10 @@
 
 #import "ARTiledImageScrollView.h"
 #import "ARTiledImageView.h"
-#import "ARImageBackedTiledView.h"
 #import "ARTiledImageViewDataSource.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
-
-@interface ARTiledImageScrollView ()
-@property (nonatomic, weak, readonly) ARImageBackedTiledView *imageBackedTiledImageView;
-@end
 
 @implementation ARTiledImageScrollView
 
@@ -26,6 +21,11 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
     [self setup];
 }
 
+
+- (void)setZoomScale:(CGFloat)zoomScale
+{
+    [super setZoomScale:zoomScale];
+}
 
 - (void)setup
 {
@@ -49,6 +49,7 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
     UITapGestureRecognizer *twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerTap:)];
     [twoFingerTap setNumberOfTouchesRequired:2];
     [self addGestureRecognizer:twoFingerTap];
+    _twoFingerTapGesture = twoFingerTap;
 
     [self.panGestureRecognizer addTarget:self action:@selector(mapPanGestureHandler:)];
 }
@@ -61,9 +62,9 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
 }
 
 
-- (void)setMaxMinZoomScalesForCurrentBounds
+- (void)setMaxMinZoomScalesForBounds:(CGRect)bounds
 {
-    CGSize boundsSize = self.bounds.size;
+    CGSize boundsSize = bounds.size;
     CGSize imageSize = [self.dataSource imageSizeForImageView:nil];
 
     // Calculate min/max zoomscale.
@@ -213,6 +214,14 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
 }
 
 
+- (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer
+{
+    // Two-finger tap zooms out, but returns to normal zoom level if it reaches min zoom.
+    CGFloat newScale = self.zoomScale <= self.minimumZoomScale ? self.maximumZoomScale : self.zoomScale / (self.zoomStep ? : ARTiledImageScrollViewDefaultZoomStep);
+    [self setZoomScale:newScale animated:YES];
+}
+
+
 - (CGRect)rectAroundPoint:(CGPoint)point atZoomScale:(CGFloat)zoomScale
 {
     // Define the shape of the zoom rect.
@@ -226,14 +235,6 @@ const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
             point.y - scaledBoundsSize.height / 2,
             scaledBoundsSize.width,
             scaledBoundsSize.height);
-}
-
-
-- (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer
-{
-    // Two-finger tap zooms out, but returns to normal zoom level if it reaches min zoom.
-    CGFloat newScale = self.zoomScale <= self.minimumZoomScale ? self.maximumZoomScale : self.zoomScale / (self.zoomStep ? : ARTiledImageScrollViewDefaultZoomStep);
-    [self setZoomScale:newScale animated:YES];
 }
 
 
