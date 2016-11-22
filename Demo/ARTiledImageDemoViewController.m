@@ -36,6 +36,7 @@
         localDataSource.minTileLevel = self.minTileLevel;
         localDataSource.maxTileLevel = self.maxTileLevel;
         localDataSource.tileSize = 512;
+        localDataSource.extralVisualLevel = 2;
         localDataSource.tileFormat = @"jpg";
         _dataSource = localDataSource;
     } else {
