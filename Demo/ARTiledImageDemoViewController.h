@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Artsy. All rights reserved.
 //
 
-#import "ARTiledImageScrollView.h"
+@class ARTiledImageScrollView;
 
 @interface ARTiledImageDemoViewController : UIViewController
 
