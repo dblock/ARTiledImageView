@@ -7,9 +7,10 @@
 //
 
 #import "ARTiledImageDemoViewController.h"
-#import "ARTiledImageScrollView.h"
-#import "ARWebTiledImageDataSource.h"
-#import "ARLocalTiledImageDataSource.h"
+
+#import <ARTiledImageView/ARTiledImageScrollView.h>
+#import <ARTiledImageView/ARWebTiledImageDataSource.h>
+#import <ARTiledImageView/ARLocalTiledImageDataSource.h>
 
 @interface ARTiledImageDemoViewController ()
 @property (nonatomic, readonly) NSObject<ARTiledImageViewDataSource> *dataSource;

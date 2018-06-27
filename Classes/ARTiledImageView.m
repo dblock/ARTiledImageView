@@ -19,6 +19,7 @@
 @property (nonatomic, assign) NSInteger maxLevelOfDetail;
 @property (atomic, strong, readonly) NSCache *tileCache;
 @property (atomic, readonly) NSMutableDictionary *downloadOperations;
+@property (nonatomic, assign) CGRect threadSafeBounds;
 @end
 
 @implementation ARTiledImageView
@@ -57,6 +58,17 @@
     return self;
 }
 
+- (void)setBounds:(CGRect)bounds
+{
+    [super setBounds:bounds];
+    _threadSafeBounds = bounds;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setBounds:frame];
+    _threadSafeBounds = self.bounds;
+}
 
 - (void)drawRect:(CGRect)rect
 {
@@ -71,8 +83,7 @@
     CGFloat _scaleX = CGContextGetCTM(context).a;
     CGFloat _scaleY = CGContextGetCTM(context).d;
 
-    CATiledLayer *tiledLayer = (CATiledLayer *) [self layer];
-    CGSize tileSize = tiledLayer.tileSize;
+    CGSize tileSize = [self.dataSource tileSizeForImageView:self];;
 
     //
     // Even at scales lower than 100%, we are drawing into a rect in the coordinate system of the full
@@ -108,8 +119,9 @@
 
             NSString *tileCacheKey = [NSString stringWithFormat:@"%@/%@_%@", @(level), @(col), @(row)];
             ARTile *tile = [self.tileCache objectForKey:tileCacheKey];
+
             if (!tile) {
-                tileRect = CGRectIntersection(self.bounds, tileRect);
+                tileRect = CGRectIntersection(self.threadSafeBounds, tileRect);
                 tile = [[ARTile alloc] initWithImage:tileImage rect:tileRect];
                 [self.tileCache setObject:tile forKey:tileCacheKey cost:level];
             }

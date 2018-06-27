@@ -1,3 +1,7 @@
+## 1.2.3 (06/27/2018)
+
+* Runs the thread sanitizer and addresses any non-main thread issues - (@orta)[http://github.com/orta]
+
 ## 1.2.2 (05/11/2014)
 
 * Use code from PSTCenteredScrollView for centering when scrolling out - (@orta)[http://github.com/orta]

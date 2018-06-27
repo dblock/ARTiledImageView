@@ -1,12 +1,16 @@
 workspace 'ARTiledImageView'
+inhibit_all_warnings!
 
-pod 'ARTiledImageView', :path => 'ARTiledImageView.podspec'
+target "Demo" do
+    pod 'ARTiledImageView', :path => 'ARTiledImageView.podspec'
 
-target 'IntegrationTests' do
-  pod 'Specta'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
+    target 'IntegrationTests' do
+      inherit! :search_paths
+      
+      pod 'Specta'
+      pod 'Expecta'
+      pod 'FBSnapshotTestCase', :subspecs => ["Core"]
+      pod 'Expecta+Snapshots'
+    end
 end
 
-use_frameworks!
